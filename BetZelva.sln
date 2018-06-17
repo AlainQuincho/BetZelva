@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetZelva", "BetZelva\BetZelva.csproj", "{ECFBC763-FA54-40A3-84B8-971F0076D4F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entidades", "Entidades", "{AAD5B328-8753-40EF-86F9-0062F0A14336}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Datos", "Datos", "{92B7FA62-21BE-4E81-AE2F-25A4C0F4F51C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacion", "{3829C884-1A95-44E0-9461-34FD54FED747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{C652BCCC-2F4B-429B-9B45-FA6A791069BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{9F0BC989-E0D8-4882-9464-AE6D8A51AC2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{B282D745-D4C0-4371-AF9E-DDA9D3BE5183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlesBase", "ControlesBase\ControlesBase.csproj", "{A40CCE15-9FC3-4CBD-9E23-370236924DF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotonesBase", "BotonesBase\BotonesBase.csproj", "{683BEBE0-78F8-459A-B1FB-55DAD768AF03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECFBC763-FA54-40A3-84B8-971F0076D4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECFBC763-FA54-40A3-84B8-971F0076D4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECFBC763-FA54-40A3-84B8-971F0076D4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFBC763-FA54-40A3-84B8-971F0076D4F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C652BCCC-2F4B-429B-9B45-FA6A791069BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C652BCCC-2F4B-429B-9B45-FA6A791069BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C652BCCC-2F4B-429B-9B45-FA6A791069BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C652BCCC-2F4B-429B-9B45-FA6A791069BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0BC989-E0D8-4882-9464-AE6D8A51AC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0BC989-E0D8-4882-9464-AE6D8A51AC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0BC989-E0D8-4882-9464-AE6D8A51AC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0BC989-E0D8-4882-9464-AE6D8A51AC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B282D745-D4C0-4371-AF9E-DDA9D3BE5183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B282D745-D4C0-4371-AF9E-DDA9D3BE5183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B282D745-D4C0-4371-AF9E-DDA9D3BE5183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B282D745-D4C0-4371-AF9E-DDA9D3BE5183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A40CCE15-9FC3-4CBD-9E23-370236924DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40CCE15-9FC3-4CBD-9E23-370236924DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40CCE15-9FC3-4CBD-9E23-370236924DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40CCE15-9FC3-4CBD-9E23-370236924DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683BEBE0-78F8-459A-B1FB-55DAD768AF03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683BEBE0-78F8-459A-B1FB-55DAD768AF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683BEBE0-78F8-459A-B1FB-55DAD768AF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683BEBE0-78F8-459A-B1FB-55DAD768AF03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECFBC763-FA54-40A3-84B8-971F0076D4F9} = {3829C884-1A95-44E0-9461-34FD54FED747}
+		{C652BCCC-2F4B-429B-9B45-FA6A791069BB} = {92B7FA62-21BE-4E81-AE2F-25A4C0F4F51C}
+		{9F0BC989-E0D8-4882-9464-AE6D8A51AC2A} = {AAD5B328-8753-40EF-86F9-0062F0A14336}
+		{B282D745-D4C0-4371-AF9E-DDA9D3BE5183} = {92B7FA62-21BE-4E81-AE2F-25A4C0F4F51C}
+		{A40CCE15-9FC3-4CBD-9E23-370236924DF9} = {3829C884-1A95-44E0-9461-34FD54FED747}
+		{683BEBE0-78F8-459A-B1FB-55DAD768AF03} = {3829C884-1A95-44E0-9461-34FD54FED747}
+	EndGlobalSection
+EndGlobal
