@@ -17,7 +17,7 @@ namespace BetZelva
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmContenedor());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }

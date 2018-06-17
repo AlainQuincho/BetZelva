@@ -1,23 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ControlesBase;
 
-namespace ControlesBase
+namespace BetZelva
 {
-    public partial class frmContenedor : Form
+    public partial class frmMenuPrincipal :Form
     {
-        public frmContenedor()
+        public frmMenuPrincipal()
         {
             InitializeComponent();
         }
-
         private void btnMenu_Click(object sender, EventArgs e)
         {
             if (pnlMenuVertical.Width == 250)
@@ -67,7 +60,8 @@ namespace ControlesBase
 
         private void btnOpcionVisualizar_Click(object sender, EventArgs e)
         {
-
+            var frm = new frmControlDisplay();
+            frm.ShowDialog();
         }
     }
 }
