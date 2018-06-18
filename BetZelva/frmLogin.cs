@@ -10,16 +10,56 @@ using System.Windows.Forms;
 
 namespace BetZelva
 {
-    public partial class Acceso : Form
+    public partial class frmAcceso : Form
     {
-        public Acceso()
+        public frmAcceso()
         {
             InitializeComponent();
         }
 
-        private void Acceso_Load(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+            this.Close();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            string Usuario = txtUsuario.Text;
+            string Contraseña = txtContraseña.Text;
+
+            if (Validar())
+                return;
+
+            // Valida Inicio de session
+
+
 
         }
+
+        private void FrmAcceso_Load(object sender, EventArgs e)
+        {
+            txtContraseña.Clear();
+            txtUsuario.Clear();
+
+        }
+
+        private bool Validar()
+        {
+            if(string.IsNullOrEmpty(txtUsuario.Text))
+            {
+                MessageBox.Show("Debe ingresar el usuario", "Acceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtContraseña.Clear();
+                return true;
+            }
+            if(string.IsNullOrEmpty(txtContraseña.Text))
+            {
+                MessageBox.Show("Debe ingresar la contraseña","Acceso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                txtContraseña.Clear();
+                return true;
+            }
+            return false;
+        }
+
     }
 }
