@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="AdMantenimientoUsuario.cs" />
     <Compile Include="AdPerfil.cs" />
+    <Compile Include="clsApuestas.cs" />
+    <Compile Include="clsConfiguraciones.cs" />
+    <Compile Include="clsInicioCuadreOperaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

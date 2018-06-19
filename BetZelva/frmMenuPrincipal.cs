@@ -85,5 +85,11 @@ namespace BetZelva
         {
             OpenFormInPanel(new frmMantenimientoUsuario());
         }
+
+        private void btnInicioOperaciones_Click(object sender, EventArgs e)
+        {
+            frmInicioOperaciones frmInicioOpe = new frmInicioOperaciones();
+            frmInicioOpe.Show();
+        }
     }
 }

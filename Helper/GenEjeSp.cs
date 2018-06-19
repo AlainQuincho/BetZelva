@@ -61,7 +61,7 @@ namespace Helper
             {
                 lstParams.Connection = con;
 
-                lstParams.CommandText = "GEN_LstParamsxSP_SP";
+                lstParams.CommandText = "BET_LstParamsxSP_SP";
                 lstParams.CommandType = CommandType.StoredProcedure;
                 lstParams.Parameters.Add(new SqlParameter("@x_cNombreSP", nombreSp));
                 SqlDataReader parametersReader = lstParams.ExecuteReader();
@@ -284,11 +284,11 @@ namespace Helper
         {
 
             SqlConnectionStringBuilder cnBuilder = new SqlConnectionStringBuilder();
-            cnBuilder.DataSource = "DESKTOP-4S6RUMB";
-            cnBuilder.InitialCatalog = "BetZelva";
+            cnBuilder.DataSource = "jhak.database.windows.net";
+            cnBuilder.InitialCatalog = "BdBetZelva";
             cnBuilder.IntegratedSecurity = false;
-            cnBuilder.UserID = "hcamasca";
-            cnBuilder.Password = "hcamasca";
+            cnBuilder.UserID = "jhak";
+            cnBuilder.Password = "jh@k1234";
 
             return cnBuilder.ToString();
 

@@ -45,7 +45,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInicioOperaciones = new System.Windows.Forms.Button();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
@@ -154,7 +154,7 @@
             this.pnlMenuVertical.Controls.Add(this.button8);
             this.pnlMenuVertical.Controls.Add(this.button4);
             this.pnlMenuVertical.Controls.Add(this.button3);
-            this.pnlMenuVertical.Controls.Add(this.button1);
+            this.pnlMenuVertical.Controls.Add(this.btnInicioOperaciones);
             this.pnlMenuVertical.Controls.Add(this.ptbLogo);
             this.pnlMenuVertical.Controls.Add(this.button2);
             this.pnlMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -301,22 +301,23 @@
             this.button3.Text = "Inicio de operaciones";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnInicioOperaciones
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(21, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Inicio de operaciones";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInicioOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnInicioOperaciones.FlatAppearance.BorderSize = 0;
+            this.btnInicioOperaciones.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnInicioOperaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicioOperaciones.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicioOperaciones.ForeColor = System.Drawing.Color.White;
+            this.btnInicioOperaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnInicioOperaciones.Image")));
+            this.btnInicioOperaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicioOperaciones.Location = new System.Drawing.Point(21, 145);
+            this.btnInicioOperaciones.Name = "btnInicioOperaciones";
+            this.btnInicioOperaciones.Size = new System.Drawing.Size(229, 32);
+            this.btnInicioOperaciones.TabIndex = 4;
+            this.btnInicioOperaciones.Text = "Inicio de operaciones";
+            this.btnInicioOperaciones.UseVisualStyleBackColor = false;
+            this.btnInicioOperaciones.Click += new System.EventHandler(this.btnInicioOperaciones_Click);
             // 
             // ptbLogo
             // 
@@ -387,7 +388,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInicioOperaciones;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button button2;
     }
