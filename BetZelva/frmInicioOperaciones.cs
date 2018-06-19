@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatos;
+using Entidades;
 
 namespace BetZelva
 {
@@ -20,6 +21,7 @@ namespace BetZelva
         private int pnCantidad = 0;
         private int pidUsuario = 0;
         string cResp;
+        string cUsuario = "";
 
         #endregion
         public frmInicioOperaciones()
@@ -30,16 +32,17 @@ namespace BetZelva
         private void frmInicioOperaciones_Load(object sender, EventArgs e)
         {
             btnGrabar.Enabled = true;
+            VarGlobal.SysUser  = new Usuario();
+            VarGlobal.SysUser.idUsuario = 1;
+            pidUsuario = VarGlobal.SysUser.idUsuario;
+            cUsuario = VarGlobal.SysUser.cNombre;
             DatosUsuario();
-            pidUsuario = 1;
             if (pidUsuario==0)
             {
                 MessageBox.Show("No existe usuario", "Validar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
                 return;
             }
-
-
 
                 DataTable tbSaldos = new clsInicioCuadreOperaciones().SaldoIniOpe( DateTime.Today, 1);
                 if (tbSaldos.Rows.Count > 0)
@@ -77,10 +80,9 @@ namespace BetZelva
         private void DatosUsuario()
         {
             dtpFechaInicio.Value = DateTime.Today;
-            txtUsuario.Text = "adelacruz";
-            int nidUsuario = 1;
+            txtUsuario.Text = cUsuario;
           
-            DataTable DatosCli = new clsInicioCuadreOperaciones().ListaUsuario(nidUsuario, "D");
+            DataTable DatosCli = new clsInicioCuadreOperaciones().ListaUsuario(pidUsuario, "D");
             if (DatosCli.Rows.Count > 0)
             {
                 txtUsuario.Text = DatosCli.Rows[0]["cNombre"].ToString();
@@ -92,7 +94,7 @@ namespace BetZelva
         }
         private string ValidarInicioOpeCaj()
         {
-            string cEstCie = new clsInicioCuadreOperaciones().ValIniOpeCaja(DateTime.Today, 1).Rows[0][0].ToString();
+            string cEstCie = new clsInicioCuadreOperaciones().ValIniOpeCaja(DateTime.Today, pidUsuario).Rows[0][0].ToString();
             return cEstCie;
         }
 
@@ -104,7 +106,7 @@ namespace BetZelva
                 string Rpta;
                 double nMonSol = Convert.ToDouble(txtInicioSoles.Text);
                 double nMonDol = Convert.ToDouble(txtInicioDolares.Text);
-                Rpta = new clsInicioCuadreOperaciones().GuardaIniOpe(DateTime.Today, 1, nMonSol, nMonDol);
+                Rpta = new clsInicioCuadreOperaciones().GuardaIniOpe(DateTime.Today, pidUsuario, nMonSol, nMonDol);
                 if (Rpta == "OK")
                 {
                     MessageBox.Show("El Inicio de Operaciones se Realizó Correctamente...", "Inicio de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);

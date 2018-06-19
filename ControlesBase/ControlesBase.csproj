@@ -54,6 +54,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="txtCBLetra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtCBLetra.designer.cs">
+      <DependentUpon>txtCBLetra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="txtCBNroDocumentos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtCBNroDocumentos.designer.cs">
+      <DependentUpon>txtCBNroDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="txtCBNumerosEnteros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtCBNumerosEnteros.designer.cs">
+      <DependentUpon>txtCBNumerosEnteros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="txtNumRea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtNumRea.Designer.cs">
+      <DependentUpon>txtNumRea.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmContenedor.resx">
