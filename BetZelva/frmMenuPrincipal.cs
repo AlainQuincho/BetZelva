@@ -63,5 +63,27 @@ namespace BetZelva
             var frm = new frmControlDisplay();
             frm.ShowDialog();
         }
+
+        private void OpenFormInPanel(object frmHijo)
+        {
+            if (pnlContenedor.Controls.Count > 0)
+            {
+                pnlContenedor.Controls.RemoveAt(0);
+            }
+            var frm = frmHijo as Form;
+            if (frm != null)
+            {
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                this.pnlContenedor.Controls.Add(frm);
+                pnlContenedor.Tag = frm;
+                frm.Show();
+            }
+        }
+
+        private void btnFrmUsuarios_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanel(new frmMantenimientoUsuario());
+        }
     }
 }

@@ -41,7 +41,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnFrmUsuarios = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -150,7 +150,7 @@
             this.pnlMenuVertical.Controls.Add(this.button10);
             this.pnlMenuVertical.Controls.Add(this.button5);
             this.pnlMenuVertical.Controls.Add(this.button6);
-            this.pnlMenuVertical.Controls.Add(this.button7);
+            this.pnlMenuVertical.Controls.Add(this.btnFrmUsuarios);
             this.pnlMenuVertical.Controls.Add(this.button8);
             this.pnlMenuVertical.Controls.Add(this.button4);
             this.pnlMenuVertical.Controls.Add(this.button3);
@@ -232,22 +232,23 @@
             this.button6.Text = "Inicio de operaciones";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnFrmUsuarios
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(21, 307);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(229, 32);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Inicio de operaciones";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnFrmUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnFrmUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnFrmUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnFrmUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrmUsuarios.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrmUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnFrmUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnFrmUsuarios.Image")));
+            this.btnFrmUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFrmUsuarios.Location = new System.Drawing.Point(21, 307);
+            this.btnFrmUsuarios.Name = "btnFrmUsuarios";
+            this.btnFrmUsuarios.Size = new System.Drawing.Size(229, 32);
+            this.btnFrmUsuarios.TabIndex = 14;
+            this.btnFrmUsuarios.Text = "Mantenimiento usuarios";
+            this.btnFrmUsuarios.UseVisualStyleBackColor = false;
+            this.btnFrmUsuarios.Click += new System.EventHandler(this.btnFrmUsuarios_Click);
             // 
             // button8
             // 
@@ -382,7 +383,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnFrmUsuarios;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
