@@ -176,6 +176,31 @@
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\boss_man-128.png" />
+    <Content Include="Resources\btnMaximizar.png" />
+    <Content Include="Resources\btnMinimizar.png" />
+    <Content Include="Resources\btnRestaurar.png" />
+    <Content Include="Resources\btnSalir.png" />
+    <Content Include="Resources\Clientes.png" />
+    <Content Include="Resources\compras.png" />
+    <Content Include="Resources\empleados.png" />
+    <Content Include="Resources\icon cerrar2.png" />
+    <Content Include="Resources\icon maximizar.png" />
+    <Content Include="Resources\icon minimizar.png" />
+    <Content Include="Resources\icon restaurar.png" />
+    <Content Include="Resources\IconoCalculadora.png" />
+    <Content Include="Resources\IconoMiniVentas.png" />
+    <Content Include="Resources\Logo.png" />
+    <Content Include="Resources\logo5.png" />
+    <Content Include="Resources\marca.png" />
+    <Content Include="Resources\MiniLogo.png" />
+    <Content Include="Resources\Mobile-Menu-Icon.png" />
+    <Content Include="Resources\pagos.png" />
+    <Content Include="Resources\prodcutos.png" />
+    <Content Include="Resources\reloj.png" />
+    <Content Include="Resources\ventas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
