@@ -45,7 +45,9 @@
     <Compile Include="AdMantenimientoRonda.cs" />
     <Compile Include="AdMantenimientoUsuario.cs" />
     <Compile Include="AdPerfil.cs" />
+    <Compile Include="AdResultadoEquipos.cs" />
     <Compile Include="AdVarGlobal.cs" />
+    <Compile Include="clsADUsuario.cs" />
     <Compile Include="clsApuestas.cs" />
     <Compile Include="clsConfiguraciones.cs" />
     <Compile Include="clsInicioCuadreOperaciones.cs" />

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<conexion>
+  <datos>
+    <server>jhak.database.windows.net</server>
+    <database>BdBetZelva</database>
+    <autenticacion>2</autenticacion>
+  </datos>
+</conexion>
+
+

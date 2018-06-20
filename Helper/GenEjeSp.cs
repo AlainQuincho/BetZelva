@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Xml;
 using System.Configuration;
+using Entidades;
 
 namespace Helper
 {
@@ -282,14 +283,17 @@ namespace Helper
         }
         private string GetConnectionString()
         {
-            SqlConnectionStringBuilder cnBuilder = new SqlConnectionStringBuilder();
-            cnBuilder.DataSource = "jhak.database.windows.net";
-            cnBuilder.InitialCatalog = "BdBetZelva";
-            cnBuilder.IntegratedSecurity = false;
-            cnBuilder.UserID = "jhak";
-            cnBuilder.Password = "jh@k1234";
-
-            return cnBuilder.ToString();
+            #region Comentado
+            //SqlConnectionStringBuilder cnBuilder = new SqlConnectionStringBuilder();
+            //cnBuilder.DataSource = "jhak.database.windows.net";
+            //cnBuilder.InitialCatalog = "BdBetZelva";
+            //cnBuilder.IntegratedSecurity = false;
+            //cnBuilder.UserID = "jhak";
+            //cnBuilder.Password = "jh@k1234";
+            //return cnBuilder.ToString();
+            #endregion 
+            string CadenaConexion = clsVarGlobal.cConexString;
+            return CadenaConexion;
         }
         private DataTable estructuraVacia()
         {

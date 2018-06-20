@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,12 @@
     </Compile>
     <Compile Include="frmBuscaEncuentro.Designer.cs">
       <DependentUpon>frmBuscaEncuentro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCierreApuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCierreApuesta.Designer.cs">
+      <DependentUpon>frmCierreApuesta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmControlDisplay.cs">
       <SubType>Form</SubType>
@@ -111,6 +118,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBuscaEncuentro.resx">
       <DependentUpon>frmBuscaEncuentro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCierreApuesta.resx">
+      <DependentUpon>frmCierreApuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmControlDisplay.resx">
       <DependentUpon>frmControlDisplay.cs</DependentUpon>
@@ -177,6 +187,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="conexion.xml" />
     <Content Include="Resources\boss_man-128.png" />
     <Content Include="Resources\btnMaximizar.png" />
     <Content Include="Resources\btnMinimizar.png" />

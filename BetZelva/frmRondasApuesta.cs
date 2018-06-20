@@ -16,7 +16,7 @@ namespace BetZelva
     {
         AdMantenimientoRonda _Ronda = new AdMantenimientoRonda();
         List<ConfiguraApuesta> _ListaConfiguracion = new List<ConfiguraApuesta>();
-        string Accion = "";
+        string _Accion = "";
         public frmRondasApuesta()
         {
             InitializeComponent();
@@ -81,7 +81,7 @@ namespace BetZelva
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             #region Agregar
-            if (!Accion.Equals("Agregar"))
+            if (!_Accion.Equals("N"))
             {
                 _ListaConfiguracion.Clear();
             }
@@ -108,6 +108,10 @@ namespace BetZelva
 
             LimpiaControles();
             HabilitaControles(true);
+            chcActivo.Enabled = true;
+            dtgDetalle.Enabled = true;
+            chcActivo.Checked = false;
+
         }
         private void FormatoGrid()
         {
@@ -125,7 +129,7 @@ namespace BetZelva
             dtgDetalle.Columns["nMultiplicadorEmpate"].Visible = true;
             dtgDetalle.Columns["dFechaEncuentro"].Visible = true;
             dtgDetalle.Columns["tHoraEncuentro"].Visible = true;
-            dtgDetalle.Columns["cEstado"].Visible = true;
+            dtgDetalle.Columns["lVigente"].Visible = true;
 
             dtgDetalle.Columns["idConfiguraciones"].HeaderText = "Cod";
             dtgDetalle.Columns["cTorneo"].HeaderText = "Torneo";
@@ -136,7 +140,7 @@ namespace BetZelva
             dtgDetalle.Columns["nMultiplicadorEmpate"].HeaderText = "Mul. Empate";
             dtgDetalle.Columns["dFechaEncuentro"].HeaderText = "Fecha";
             dtgDetalle.Columns["tHoraEncuentro"].HeaderText = "Hora";
-            dtgDetalle.Columns["cEstado"].HeaderText = "Estado";
+            dtgDetalle.Columns["lVigente"].HeaderText = "Estado";
 
             //dtgDetalle.Columns["idConfiguraciones"].Width = 0;
             //dtgDetalle.Columns["cTorneo"].Width = 0;
@@ -156,7 +160,9 @@ namespace BetZelva
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-
+            int index = dtgDetalle.CurrentRow.Index;
+            //int idRonda
+            // TODO: CONTINUA DE DESDE AQUI
         }
         private void LimpiaControles()
         {
@@ -186,6 +192,7 @@ namespace BetZelva
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            _Accion = "N";
             LimpiaControles();
             HabilitaControles(true);
             dtgDetalle.Enabled = false;
@@ -195,6 +202,93 @@ namespace BetZelva
 
         private void chcActivo_CheckedChanged(object sender, EventArgs e)
         {
+            _Accion = "";
+            bool lEstado = chcActivo.Checked;
+            if (chcActivo.Checked)
+            {
+                _ListaConfiguracion = _ListaConfiguracion.Where(x => x.lVigente == lEstado).ToList();
+            }else
+            {
+                _ListaConfiguracion = _Ronda.ListaConfiguraciones();
+            }
+           
+            dtgDetalle.DataSource = _ListaConfiguracion;
+            FormatoGrid();
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            _Accion = "";
+            LimpiaControles();
+            HabilitaControles(false);
+            dtgDetalle.Enabled = true;
+            chcActivo.Enabled = true;
+            chcActivo.Checked = false;
+        }
+
+        private void CargarConfiguracion()
+        {
+            _ListaConfiguracion = _Ronda.ListaConfiguraciones();
+            dtgDetalle.DataSource = _ListaConfiguracion;
+            FormatoGrid();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e) // editar
+        {
+            _Accion = "A";
+            HabilitaControles(true);
+            dtgDetalle.Enabled = false;
+            chcActivo.Enabled = false;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            //logica de guardado
+            if (ValidaGuardar())
+                return;
+            string XML = "";
+
+            int idUsuario = VarGlobal.SysUser.idUsuario;
+            DateTime dFechaSys = VarGlobal.dFechaSys;
+            string Rtpa = "";
+            if (_Accion.Equals("N"))
+            {
+                Rtpa = _Ronda.GuardaNuevaConfiguracion(XML, idUsuario, dFechaSys);
+            }
+            else 
+            if (_Accion.Equals("A"))
+            {
+                Rtpa = _Ronda.ActualizaConfiguracion(XML, idUsuario, dFechaSys);
+            }
+
+            MessageBox.Show(Rtpa, "Guarda configuracion de apuestas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              
+            _Accion = "";
+            HabilitaControles(false);
+            LimpiaControles();
+            dtgDetalle.Enabled = true;
+            chcActivo.Enabled = true;
+            chcActivo.Checked = false;
+            CargarConfiguracion();
+
+        }
+
+        private bool ValidaGuardar()
+        {
+            string MSJ = "";
+            if(_ListaConfiguracion.Count <= 0)
+            {
+                MSJ = "No existen datos para guardar";
+                return true;
+            }
+
+            if (!MSJ.Equals(""))
+            {
+                MessageBox.Show(MSJ, "Guardar configuración de apuestas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return false;
 
         }
     }

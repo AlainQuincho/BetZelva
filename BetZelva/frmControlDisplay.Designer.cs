@@ -138,7 +138,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.253012F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.74699F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel3.Controls.Add(this.dtgParticipantesRonda, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -166,7 +166,7 @@
             this.dtgParticipantesRonda.GridColor = System.Drawing.SystemColors.Control;
             this.dtgParticipantesRonda.Location = new System.Drawing.Point(29, 62);
             this.dtgParticipantesRonda.Name = "dtgParticipantesRonda";
-            this.dtgParticipantesRonda.Size = new System.Drawing.Size(783, 411);
+            this.dtgParticipantesRonda.Size = new System.Drawing.Size(782, 411);
             this.dtgParticipantesRonda.TabIndex = 0;
             this.dtgParticipantesRonda.SelectionChanged += new System.EventHandler(this.dtgParticipantesRonda_SelectionChanged);
             // 
@@ -223,7 +223,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(29, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(783, 59);
+            this.label3.Size = new System.Drawing.Size(782, 59);
             this.label3.TabIndex = 1;
             this.label3.Text = "Lista de participantes de la ronda:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -41,11 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsGENConexion.cs" />
+    <Compile Include="clsPassword.cs" />
+    <Compile Include="clsUsuario.cs" />
+    <Compile Include="clsVarGlobal.cs" />
     <Compile Include="ConfiguraApuesta.cs" />
     <Compile Include="Equipo.cs" />
     <Compile Include="ParticipantesRondaView.cs" />
     <Compile Include="Perfil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultadoEquipos.cs" />
     <Compile Include="RondaView.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="VarGlobal.cs" />

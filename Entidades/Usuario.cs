@@ -12,5 +12,8 @@ namespace Entidades
         public string cCelular { get; set; }
         public bool lVigente { get; set; }
         public int idPerfil { get; set; }
+        public string CodigoAD      { get; set; }
+        public string clave         { get; set; }
+        public string cUsuario { get; set; }
     }
 }
