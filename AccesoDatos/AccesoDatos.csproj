@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdMantenimientoRonda.cs" />
     <Compile Include="AdMantenimientoUsuario.cs" />
     <Compile Include="AdPerfil.cs" />
+    <Compile Include="AdVarGlobal.cs" />
     <Compile Include="clsApuestas.cs" />
     <Compile Include="clsConfiguraciones.cs" />
     <Compile Include="clsInicioCuadreOperaciones.cs" />

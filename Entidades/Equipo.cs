@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public static class VarGlobal
+    public class Equipo
     {
-        public static Usuario SysUser {get; set;}
-        public static DateTime dFechaSys { get; set; }
-        
+        public int CodEquipo { get; set; }
+        public string NombreEquipo { get; set; }
     }
 }

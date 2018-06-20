@@ -101,6 +101,12 @@
     <Compile Include="frmRegistroEncuentro.Designer.cs">
       <DependentUpon>frmRegistroEncuentro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRondasApuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRondasApuesta.Designer.cs">
+      <DependentUpon>frmRondasApuesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBuscaEncuentro.resx">
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistroEncuentro.resx">
       <DependentUpon>frmRegistroEncuentro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRondasApuesta.resx">
+      <DependentUpon>frmRondasApuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
