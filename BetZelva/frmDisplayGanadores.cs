@@ -78,6 +78,7 @@ namespace BetZelva
             }
             else
             {
+                lblRondaGanadores.Text = @"--- . ---";
                 timerG.Enabled = true;
                 timerG.Interval = 2000;
             }
@@ -99,6 +100,12 @@ namespace BetZelva
             timerGParticipantes.Enabled = true;
             timerGParticipantes.Interval = 2000;
         }
+
+        private void btnApagado_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void timerG_Tick(object sender, EventArgs e)
         {
             timerG.Enabled = false;

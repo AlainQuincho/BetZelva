@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatos;
 
@@ -271,6 +265,15 @@ namespace BetZelva
         {
             txtnAnotacionVisita.SelectAll();
         }
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            HabilitaLimpiaControles(false, 1);
+            HabilitaLimpiaControles(true, 4);
+        }
+
+
+        #endregion
+
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             if (ValidaDatos())
@@ -286,26 +289,17 @@ namespace BetZelva
                 DataTable dtRes = new clsApuestas().ADRegistraApuesta(idConfiguraciones, cNombres, cApellidos,
                                                                                                      cDocumento, nMontoApuesta, nAnotacionesLocal,
                                                                                                      nAnotacionesVisita, dFechaReg, idUsuarioReg);
-                if (dtRes.Rows.Count>0)
+                if (dtRes.Rows.Count > 0)
                 {
-                    if (Convert.ToInt32(dtRes.Rows[0][0])==0)
+                    if (Convert.ToInt32(dtRes.Rows[0][0]) == 0)
                     {
                         txtCodRecibo.Text = dtRes.Rows[0]["idRecibo"].ToString();
                         Voucher(dtRes);
                         HabilitaLimpiaControles(true, 3);
                     }
                 }
-              
+
             }
-            
         }
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            HabilitaLimpiaControles(false, 1);
-            HabilitaLimpiaControles(true, 4);
-        }
-        #endregion
-
-
     }
 }

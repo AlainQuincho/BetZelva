@@ -40,9 +40,13 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.lblRondaGanadores = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnApagado = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRondaGanadores)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnApagado)).BeginInit();
             this.SuspendLayout();
             // 
             // timerG
@@ -58,9 +62,10 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.104651F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.89535F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel4.Controls.Add(this.dtgRondaGanadores, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel1, 1, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -98,7 +103,7 @@
             this.dtgRondaGanadores.Location = new System.Drawing.Point(46, 77);
             this.dtgRondaGanadores.Name = "dtgRondaGanadores";
             this.dtgRondaGanadores.RowHeadersVisible = false;
-            this.dtgRondaGanadores.Size = new System.Drawing.Size(668, 474);
+            this.dtgRondaGanadores.Size = new System.Drawing.Size(664, 474);
             this.dtgRondaGanadores.TabIndex = 1;
             // 
             // FilaGanadorColumn
@@ -131,7 +136,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(668, 68);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(664, 68);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // label4
@@ -142,7 +147,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(662, 34);
+            this.label4.Size = new System.Drawing.Size(658, 34);
             this.label4.TabIndex = 0;
             this.label4.Text = "Ganadores ronda:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,14 +156,35 @@
             // 
             this.lblRondaGanadores.AutoSize = true;
             this.lblRondaGanadores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblRondaGanadores.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRondaGanadores.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRondaGanadores.ForeColor = System.Drawing.Color.Yellow;
             this.lblRondaGanadores.Location = new System.Drawing.Point(3, 34);
             this.lblRondaGanadores.Name = "lblRondaGanadores";
-            this.lblRondaGanadores.Size = new System.Drawing.Size(662, 34);
+            this.lblRondaGanadores.Size = new System.Drawing.Size(658, 34);
             this.lblRondaGanadores.TabIndex = 1;
             this.lblRondaGanadores.Text = "--- . ---";
             this.lblRondaGanadores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnApagado);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(46, 557);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(664, 57);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // btnApagado
+            // 
+            this.btnApagado.Image = global::BetZelva.Properties.Resources.boton_de_apagado;
+            this.btnApagado.Location = new System.Drawing.Point(561, 3);
+            this.btnApagado.Name = "btnApagado";
+            this.btnApagado.Size = new System.Drawing.Size(100, 50);
+            this.btnApagado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnApagado.TabIndex = 0;
+            this.btnApagado.TabStop = false;
+            this.btnApagado.Click += new System.EventHandler(this.btnApagado_Click);
             // 
             // frmDisplayGanadores
             // 
@@ -176,6 +202,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgRondaGanadores)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnApagado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,5 +219,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombresGanadorColumn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblRondaGanadores;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox btnApagado;
     }
 }
