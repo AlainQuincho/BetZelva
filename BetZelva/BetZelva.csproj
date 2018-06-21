@@ -204,6 +204,10 @@
       <Project>{c652bccc-2f4b-429b-9b45-fa6a791069bb}</Project>
       <Name>AccesoDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BotonesBase\BotonesBase.csproj">
+      <Project>{683bebe0-78f8-459a-b1fb-55dad768af03}</Project>
+      <Name>BotonesBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ControlesBase\ControlesBase.csproj">
       <Project>{A40CCE15-9FC3-4CBD-9E23-370236924DF9}</Project>
       <Name>ControlesBase</Name>
@@ -211,6 +215,10 @@
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{9f0bc989-e0d8-4882-9464-ae6d8a51ac2a}</Project>
       <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{b282d745-d4c0-4371-af9e-dda9d3be5183}</Project>
+      <Name>Helper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
