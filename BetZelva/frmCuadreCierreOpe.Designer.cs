@@ -36,18 +36,37 @@
             this.btnContinuar = new System.Windows.Forms.Button();
             this.tabBilletaje = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtTotalSoles = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtBilleteSoles = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtMonedaSoles = new GEN.ControlesBase.txtNumRea(this.components);
+            this.dtgBillete = new System.Windows.Forms.DataGridView();
+            this.dtgMoneda = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtToralDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtBilleteDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.dtgBilletesDolares = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnGrabarCuadre = new System.Windows.Forms.Button();
             this.tabCuadre = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dtgIngresosSoles = new System.Windows.Forms.DataGridView();
+            this.dtgEgresosSoles = new System.Windows.Forms.DataGridView();
+            this.txtEgresosSoles = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtIngresoSoles = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtMontoInicioSoles = new GEN.ControlesBase.txtNumRea(this.components);
+            this.lblSoles = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtDiferencia = new GEN.ControlesBase.txtNumRea(this.components);
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSaldoSoles = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtSaldoCortSoles = new GEN.ControlesBase.txtNumRea(this.components);
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,6 +75,24 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.txtInicioDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtEgresoDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtIngresoDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.dtgIngresosDolares = new System.Windows.Forms.DataGridView();
+            this.dtgEgresosDolares = new System.Windows.Forms.DataGridView();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblDolares = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtDiferenciaDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.label21 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtSaldoCortDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.txtSaldoOpeDolares = new GEN.ControlesBase.txtNumRea(this.components);
+            this.label24 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -64,64 +101,27 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lblSoles = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lblDolares = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.btnGrabarCuadre = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.dtgMoneda = new System.Windows.Forms.DataGridView();
-            this.dtgBillete = new System.Windows.Forms.DataGridView();
-            this.txtMonedaSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtBilleteSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtTotalSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.dtgBilletesDolares = new System.Windows.Forms.DataGridView();
-            this.txtBilleteDolares = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtToralDolares = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtMontoInicioSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtIngresoSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtEgresosSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtSaldoSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtSaldoCortSoles = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtDiferencia = new GEN.ControlesBase.txtNumRea(this.components);
-            this.dtgEgresosSoles = new System.Windows.Forms.DataGridView();
-            this.dtgIngresosSoles = new System.Windows.Forms.DataGridView();
-            this.dtgIngresosDolares = new System.Windows.Forms.DataGridView();
-            this.dtgEgresosDolares = new System.Windows.Forms.DataGridView();
-            this.txtSaldoOpeDolares = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtSaldoCortDolares = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtIngresoDolares = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtEgresoDolares = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtInicioDolares = new GEN.ControlesBase.txtNumRea(this.components);
-            this.txtDiferenciaDolares = new GEN.ControlesBase.txtNumRea(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabBilletaje.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBillete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMoneda)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBilletesDolares)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabCuadre.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgIngresosSoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEgresosSoles)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMoneda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBillete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBilletesDolares)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEgresosSoles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgIngresosSoles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIngresosDolares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEgresosDolares)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -156,6 +156,7 @@
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "&Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGrabarBilletaje
             // 
@@ -165,6 +166,7 @@
             this.btnGrabarBilletaje.TabIndex = 2;
             this.btnGrabarBilletaje.Text = "&Grabar";
             this.btnGrabarBilletaje.UseVisualStyleBackColor = true;
+            this.btnGrabarBilletaje.Click += new System.EventHandler(this.btnGrabarBilletaje_Click);
             // 
             // btnContinuar
             // 
@@ -174,6 +176,7 @@
             this.btnContinuar.TabIndex = 1;
             this.btnContinuar.Text = "Continuar >>";
             this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // tabBilletaje
             // 
@@ -184,6 +187,7 @@
             this.tabBilletaje.SelectedIndex = 0;
             this.tabBilletaje.Size = new System.Drawing.Size(560, 318);
             this.tabBilletaje.TabIndex = 0;
+            this.tabBilletaje.Click += new System.EventHandler(this.tabBilletaje_Click);
             // 
             // tabPage3
             // 
@@ -202,6 +206,96 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "SOLES";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // txtTotalSoles
+            // 
+            this.txtTotalSoles.FormatoDecimal = false;
+            this.txtTotalSoles.Location = new System.Drawing.Point(262, 266);
+            this.txtTotalSoles.Name = "txtTotalSoles";
+            this.txtTotalSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtTotalSoles.nNumDecimales = 4;
+            this.txtTotalSoles.nvalor = 0D;
+            this.txtTotalSoles.ReadOnly = true;
+            this.txtTotalSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalSoles.TabIndex = 11;
+            this.txtTotalSoles.Text = "0.00";
+            this.txtTotalSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBilleteSoles
+            // 
+            this.txtBilleteSoles.FormatoDecimal = false;
+            this.txtBilleteSoles.Location = new System.Drawing.Point(446, 240);
+            this.txtBilleteSoles.Name = "txtBilleteSoles";
+            this.txtBilleteSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtBilleteSoles.nNumDecimales = 4;
+            this.txtBilleteSoles.nvalor = 0D;
+            this.txtBilleteSoles.ReadOnly = true;
+            this.txtBilleteSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtBilleteSoles.TabIndex = 10;
+            this.txtBilleteSoles.Text = "0.00";
+            this.txtBilleteSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtMonedaSoles
+            // 
+            this.txtMonedaSoles.FormatoDecimal = false;
+            this.txtMonedaSoles.Location = new System.Drawing.Point(156, 240);
+            this.txtMonedaSoles.Name = "txtMonedaSoles";
+            this.txtMonedaSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtMonedaSoles.nNumDecimales = 4;
+            this.txtMonedaSoles.nvalor = 0D;
+            this.txtMonedaSoles.ReadOnly = true;
+            this.txtMonedaSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtMonedaSoles.TabIndex = 9;
+            this.txtMonedaSoles.Text = "0.00";
+            this.txtMonedaSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dtgBillete
+            // 
+            this.dtgBillete.AllowUserToAddRows = false;
+            this.dtgBillete.AllowUserToDeleteRows = false;
+            this.dtgBillete.AllowUserToResizeColumns = false;
+            this.dtgBillete.AllowUserToResizeRows = false;
+            this.dtgBillete.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgBillete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgBillete.Location = new System.Drawing.Point(284, 6);
+            this.dtgBillete.MultiSelect = false;
+            this.dtgBillete.Name = "dtgBillete";
+            this.dtgBillete.RowHeadersVisible = false;
+            this.dtgBillete.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgBillete.Size = new System.Drawing.Size(272, 228);
+            this.dtgBillete.TabIndex = 8;
+            this.dtgBillete.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgBillete_CellValueChanged);
+            this.dtgBillete.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtgBillete_EditingControlShowing);
+            // 
+            // dtgMoneda
+            // 
+            this.dtgMoneda.AllowUserToAddRows = false;
+            this.dtgMoneda.AllowUserToDeleteRows = false;
+            this.dtgMoneda.AllowUserToResizeColumns = false;
+            this.dtgMoneda.AllowUserToResizeRows = false;
+            this.dtgMoneda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgMoneda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMoneda.Location = new System.Drawing.Point(6, 6);
+            this.dtgMoneda.MultiSelect = false;
+            this.dtgMoneda.Name = "dtgMoneda";
+            this.dtgMoneda.RowHeadersVisible = false;
+            this.dtgMoneda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgMoneda.Size = new System.Drawing.Size(272, 228);
+            this.dtgMoneda.TabIndex = 7;
+            this.dtgMoneda.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMoneda_CellValueChanged);
+            this.dtgMoneda.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtgMoneda_EditingControlShowing);
             // 
             // label4
             // 
@@ -245,6 +339,60 @@
             this.tabPage4.Text = "DÓLARES";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // txtToralDolares
+            // 
+            this.txtToralDolares.FormatoDecimal = false;
+            this.txtToralDolares.Location = new System.Drawing.Point(270, 185);
+            this.txtToralDolares.Name = "txtToralDolares";
+            this.txtToralDolares.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtToralDolares.nNumDecimales = 4;
+            this.txtToralDolares.nvalor = 0D;
+            this.txtToralDolares.ReadOnly = true;
+            this.txtToralDolares.Size = new System.Drawing.Size(100, 20);
+            this.txtToralDolares.TabIndex = 13;
+            this.txtToralDolares.Text = "0.00";
+            this.txtToralDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBilleteDolares
+            // 
+            this.txtBilleteDolares.FormatoDecimal = false;
+            this.txtBilleteDolares.Location = new System.Drawing.Point(312, 162);
+            this.txtBilleteDolares.Name = "txtBilleteDolares";
+            this.txtBilleteDolares.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtBilleteDolares.nNumDecimales = 4;
+            this.txtBilleteDolares.nvalor = 0D;
+            this.txtBilleteDolares.ReadOnly = true;
+            this.txtBilleteDolares.Size = new System.Drawing.Size(100, 20);
+            this.txtBilleteDolares.TabIndex = 12;
+            this.txtBilleteDolares.Text = "0.00";
+            this.txtBilleteDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dtgBilletesDolares
+            // 
+            this.dtgBilletesDolares.AllowUserToAddRows = false;
+            this.dtgBilletesDolares.AllowUserToDeleteRows = false;
+            this.dtgBilletesDolares.AllowUserToResizeColumns = false;
+            this.dtgBilletesDolares.AllowUserToResizeRows = false;
+            this.dtgBilletesDolares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgBilletesDolares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgBilletesDolares.Location = new System.Drawing.Point(140, 6);
+            this.dtgBilletesDolares.MultiSelect = false;
+            this.dtgBilletesDolares.Name = "dtgBilletesDolares";
+            this.dtgBilletesDolares.RowHeadersVisible = false;
+            this.dtgBilletesDolares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgBilletesDolares.Size = new System.Drawing.Size(272, 150);
+            this.dtgBilletesDolares.TabIndex = 9;
+            this.dtgBilletesDolares.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgBilletesDolares_CellValueChanged);
+            this.dtgBilletesDolares.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtgBilletesDolares_EditingControlShowing);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -275,6 +423,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(410, 333);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 2;
+            this.btnAtras.Text = "<< Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // btnGrabarCuadre
+            // 
+            this.btnGrabarCuadre.Location = new System.Drawing.Point(487, 333);
+            this.btnGrabarCuadre.Name = "btnGrabarCuadre";
+            this.btnGrabarCuadre.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabarCuadre.TabIndex = 1;
+            this.btnGrabarCuadre.Text = "Grabar";
+            this.btnGrabarCuadre.UseVisualStyleBackColor = true;
+            this.btnGrabarCuadre.Click += new System.EventHandler(this.btnGrabarCuadre_Click);
             // 
             // tabCuadre
             // 
@@ -309,6 +477,104 @@
             this.tabPage5.Text = "Cuadre Caja Soles";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // dtgIngresosSoles
+            // 
+            this.dtgIngresosSoles.AllowUserToAddRows = false;
+            this.dtgIngresosSoles.AllowUserToDeleteRows = false;
+            this.dtgIngresosSoles.AllowUserToResizeColumns = false;
+            this.dtgIngresosSoles.AllowUserToResizeRows = false;
+            this.dtgIngresosSoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgIngresosSoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgIngresosSoles.Location = new System.Drawing.Point(3, 43);
+            this.dtgIngresosSoles.MultiSelect = false;
+            this.dtgIngresosSoles.Name = "dtgIngresosSoles";
+            this.dtgIngresosSoles.RowHeadersVisible = false;
+            this.dtgIngresosSoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgIngresosSoles.Size = new System.Drawing.Size(272, 152);
+            this.dtgIngresosSoles.TabIndex = 81;
+            // 
+            // dtgEgresosSoles
+            // 
+            this.dtgEgresosSoles.AllowUserToAddRows = false;
+            this.dtgEgresosSoles.AllowUserToDeleteRows = false;
+            this.dtgEgresosSoles.AllowUserToResizeColumns = false;
+            this.dtgEgresosSoles.AllowUserToResizeRows = false;
+            this.dtgEgresosSoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgEgresosSoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEgresosSoles.Location = new System.Drawing.Point(276, 43);
+            this.dtgEgresosSoles.MultiSelect = false;
+            this.dtgEgresosSoles.Name = "dtgEgresosSoles";
+            this.dtgEgresosSoles.RowHeadersVisible = false;
+            this.dtgEgresosSoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgEgresosSoles.Size = new System.Drawing.Size(275, 152);
+            this.dtgEgresosSoles.TabIndex = 80;
+            // 
+            // txtEgresosSoles
+            // 
+            this.txtEgresosSoles.FormatoDecimal = false;
+            this.txtEgresosSoles.Location = new System.Drawing.Point(444, 194);
+            this.txtEgresosSoles.Name = "txtEgresosSoles";
+            this.txtEgresosSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtEgresosSoles.nNumDecimales = 4;
+            this.txtEgresosSoles.nvalor = 0D;
+            this.txtEgresosSoles.ReadOnly = true;
+            this.txtEgresosSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtEgresosSoles.TabIndex = 79;
+            this.txtEgresosSoles.Text = "0.00";
+            this.txtEgresosSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtIngresoSoles
+            // 
+            this.txtIngresoSoles.FormatoDecimal = false;
+            this.txtIngresoSoles.Location = new System.Drawing.Point(174, 195);
+            this.txtIngresoSoles.Name = "txtIngresoSoles";
+            this.txtIngresoSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtIngresoSoles.nNumDecimales = 4;
+            this.txtIngresoSoles.nvalor = 0D;
+            this.txtIngresoSoles.ReadOnly = true;
+            this.txtIngresoSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtIngresoSoles.TabIndex = 78;
+            this.txtIngresoSoles.Text = "0.00";
+            this.txtIngresoSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtMontoInicioSoles
+            // 
+            this.txtMontoInicioSoles.FormatoDecimal = false;
+            this.txtMontoInicioSoles.Location = new System.Drawing.Point(109, 5);
+            this.txtMontoInicioSoles.Name = "txtMontoInicioSoles";
+            this.txtMontoInicioSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtMontoInicioSoles.nNumDecimales = 4;
+            this.txtMontoInicioSoles.nvalor = 0D;
+            this.txtMontoInicioSoles.ReadOnly = true;
+            this.txtMontoInicioSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtMontoInicioSoles.TabIndex = 77;
+            this.txtMontoInicioSoles.Text = "0.00";
+            this.txtMontoInicioSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblSoles
+            // 
+            this.lblSoles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoles.ForeColor = System.Drawing.Color.Blue;
+            this.lblSoles.Location = new System.Drawing.Point(6, 279);
+            this.lblSoles.Name = "lblSoles";
+            this.lblSoles.Size = new System.Drawing.Size(538, 19);
+            this.lblSoles.TabIndex = 76;
+            this.lblSoles.Text = "CIERRE EN SOLES OK...";
+            this.lblSoles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
@@ -320,6 +586,24 @@
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = ".";
+            // 
+            // txtDiferencia
+            // 
+            this.txtDiferencia.FormatoDecimal = false;
+            this.txtDiferencia.Location = new System.Drawing.Point(280, 9);
+            this.txtDiferencia.Name = "txtDiferencia";
+            this.txtDiferencia.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtDiferencia.nNumDecimales = 4;
+            this.txtDiferencia.nvalor = 0D;
+            this.txtDiferencia.ReadOnly = true;
+            this.txtDiferencia.Size = new System.Drawing.Size(100, 20);
+            this.txtDiferencia.TabIndex = 82;
+            this.txtDiferencia.Text = "0.00";
+            this.txtDiferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label17
             // 
@@ -344,6 +628,42 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = ".";
+            // 
+            // txtSaldoSoles
+            // 
+            this.txtSaldoSoles.FormatoDecimal = false;
+            this.txtSaldoSoles.Location = new System.Drawing.Point(172, 5);
+            this.txtSaldoSoles.Name = "txtSaldoSoles";
+            this.txtSaldoSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtSaldoSoles.nNumDecimales = 4;
+            this.txtSaldoSoles.nvalor = 0D;
+            this.txtSaldoSoles.ReadOnly = true;
+            this.txtSaldoSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtSaldoSoles.TabIndex = 80;
+            this.txtSaldoSoles.Text = "0.00";
+            this.txtSaldoSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSaldoCortSoles
+            // 
+            this.txtSaldoCortSoles.FormatoDecimal = false;
+            this.txtSaldoCortSoles.Location = new System.Drawing.Point(394, 5);
+            this.txtSaldoCortSoles.Name = "txtSaldoCortSoles";
+            this.txtSaldoCortSoles.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtSaldoCortSoles.nNumDecimales = 4;
+            this.txtSaldoCortSoles.nvalor = 0D;
+            this.txtSaldoCortSoles.ReadOnly = true;
+            this.txtSaldoCortSoles.Size = new System.Drawing.Size(100, 20);
+            this.txtSaldoCortSoles.TabIndex = 81;
+            this.txtSaldoCortSoles.Text = "0.00";
+            this.txtSaldoCortSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label15
             // 
@@ -435,93 +755,91 @@
             this.tabPage6.Text = "Cuadre Caja Dólares";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // txtInicioDolares
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Monto Inicio Dólares:";
+            this.txtInicioDolares.FormatoDecimal = false;
+            this.txtInicioDolares.Location = new System.Drawing.Point(123, 6);
+            this.txtInicioDolares.Name = "txtInicioDolares";
+            this.txtInicioDolares.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtInicioDolares.nNumDecimales = 4;
+            this.txtInicioDolares.nvalor = 0D;
+            this.txtInicioDolares.ReadOnly = true;
+            this.txtInicioDolares.Size = new System.Drawing.Size(100, 20);
+            this.txtInicioDolares.TabIndex = 94;
+            this.txtInicioDolares.Text = "0.00";
+            this.txtInicioDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lblTitulo
+            // txtEgresoDolares
             // 
-            this.lblTitulo.BackColor = System.Drawing.Color.Teal;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(6, 73);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(575, 21);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "REGISTRO DE BILLETAJE";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtEgresoDolares.FormatoDecimal = false;
+            this.txtEgresoDolares.Location = new System.Drawing.Point(447, 195);
+            this.txtEgresoDolares.Name = "txtEgresoDolares";
+            this.txtEgresoDolares.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtEgresoDolares.nNumDecimales = 4;
+            this.txtEgresoDolares.nvalor = 0D;
+            this.txtEgresoDolares.ReadOnly = true;
+            this.txtEgresoDolares.Size = new System.Drawing.Size(100, 20);
+            this.txtEgresoDolares.TabIndex = 93;
+            this.txtEgresoDolares.Text = "0.00";
+            this.txtEgresoDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // groupBox1
+            // txtIngresoDolares
             // 
-            this.groupBox1.Controls.Add(this.txtUsuario);
-            this.groupBox1.Controls.Add(this.dtpFechaCuadre);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(52, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(439, 63);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Usuario";
+            this.txtIngresoDolares.FormatoDecimal = false;
+            this.txtIngresoDolares.Location = new System.Drawing.Point(173, 195);
+            this.txtIngresoDolares.Name = "txtIngresoDolares";
+            this.txtIngresoDolares.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtIngresoDolares.nNumDecimales = 4;
+            this.txtIngresoDolares.nvalor = 0D;
+            this.txtIngresoDolares.ReadOnly = true;
+            this.txtIngresoDolares.Size = new System.Drawing.Size(100, 20);
+            this.txtIngresoDolares.TabIndex = 92;
+            this.txtIngresoDolares.Text = "0.00";
+            this.txtIngresoDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtUsuario
+            // dtgIngresosDolares
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(91, 38);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(342, 20);
-            this.txtUsuario.TabIndex = 3;
+            this.dtgIngresosDolares.AllowUserToAddRows = false;
+            this.dtgIngresosDolares.AllowUserToDeleteRows = false;
+            this.dtgIngresosDolares.AllowUserToResizeColumns = false;
+            this.dtgIngresosDolares.AllowUserToResizeRows = false;
+            this.dtgIngresosDolares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgIngresosDolares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgIngresosDolares.Location = new System.Drawing.Point(3, 43);
+            this.dtgIngresosDolares.MultiSelect = false;
+            this.dtgIngresosDolares.Name = "dtgIngresosDolares";
+            this.dtgIngresosDolares.RowHeadersVisible = false;
+            this.dtgIngresosDolares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgIngresosDolares.Size = new System.Drawing.Size(272, 146);
+            this.dtgIngresosDolares.TabIndex = 89;
             // 
-            // dtpFechaCuadre
+            // dtgEgresosDolares
             // 
-            this.dtpFechaCuadre.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaCuadre.Location = new System.Drawing.Point(91, 16);
-            this.dtpFechaCuadre.Name = "dtpFechaCuadre";
-            this.dtpFechaCuadre.Size = new System.Drawing.Size(98, 20);
-            this.dtpFechaCuadre.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Usuario:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Fecha Cuadre:";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(506, 459);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.Text = "&Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // lblSoles
-            // 
-            this.lblSoles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoles.ForeColor = System.Drawing.Color.Blue;
-            this.lblSoles.Location = new System.Drawing.Point(6, 279);
-            this.lblSoles.Name = "lblSoles";
-            this.lblSoles.Size = new System.Drawing.Size(538, 19);
-            this.lblSoles.TabIndex = 76;
-            this.lblSoles.Text = "CIERRE EN SOLES OK...";
-            this.lblSoles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dtgEgresosDolares.AllowUserToAddRows = false;
+            this.dtgEgresosDolares.AllowUserToDeleteRows = false;
+            this.dtgEgresosDolares.AllowUserToResizeColumns = false;
+            this.dtgEgresosDolares.AllowUserToResizeRows = false;
+            this.dtgEgresosDolares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgEgresosDolares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEgresosDolares.Location = new System.Drawing.Point(276, 43);
+            this.dtgEgresosDolares.MultiSelect = false;
+            this.dtgEgresosDolares.Name = "dtgEgresosDolares";
+            this.dtgEgresosDolares.RowHeadersVisible = false;
+            this.dtgEgresosDolares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgEgresosDolares.Size = new System.Drawing.Size(274, 146);
+            this.dtgEgresosDolares.TabIndex = 88;
             // 
             // label16
             // 
@@ -576,6 +894,24 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = ".";
             // 
+            // txtDiferenciaDolares
+            // 
+            this.txtDiferenciaDolares.FormatoDecimal = false;
+            this.txtDiferenciaDolares.Location = new System.Drawing.Point(280, 9);
+            this.txtDiferenciaDolares.Name = "txtDiferenciaDolares";
+            this.txtDiferenciaDolares.nDecValor = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.txtDiferenciaDolares.nNumDecimales = 4;
+            this.txtDiferenciaDolares.nvalor = 0D;
+            this.txtDiferenciaDolares.ReadOnly = true;
+            this.txtDiferenciaDolares.Size = new System.Drawing.Size(100, 20);
+            this.txtDiferenciaDolares.TabIndex = 92;
+            this.txtDiferenciaDolares.Text = "0.00";
+            this.txtDiferenciaDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -614,361 +950,11 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(59, 8);
+            this.label23.Location = new System.Drawing.Point(49, 8);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(111, 13);
+            this.label23.Size = new System.Drawing.Size(119, 13);
             this.label23.TabIndex = 11;
-            this.label23.Text = "Saldo Total Soles:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(90, 198);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 13);
-            this.label24.TabIndex = 81;
-            this.label24.Text = "Total Ingresos:";
-            // 
-            // btnGrabarCuadre
-            // 
-            this.btnGrabarCuadre.Location = new System.Drawing.Point(487, 333);
-            this.btnGrabarCuadre.Name = "btnGrabarCuadre";
-            this.btnGrabarCuadre.Size = new System.Drawing.Size(75, 23);
-            this.btnGrabarCuadre.TabIndex = 1;
-            this.btnGrabarCuadre.Text = "Grabar";
-            this.btnGrabarCuadre.UseVisualStyleBackColor = true;
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Location = new System.Drawing.Point(410, 333);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
-            this.btnAtras.TabIndex = 2;
-            this.btnAtras.Text = "<< Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            // 
-            // dtgMoneda
-            // 
-            this.dtgMoneda.AllowUserToAddRows = false;
-            this.dtgMoneda.AllowUserToDeleteRows = false;
-            this.dtgMoneda.AllowUserToResizeColumns = false;
-            this.dtgMoneda.AllowUserToResizeRows = false;
-            this.dtgMoneda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgMoneda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMoneda.Location = new System.Drawing.Point(6, 6);
-            this.dtgMoneda.MultiSelect = false;
-            this.dtgMoneda.Name = "dtgMoneda";
-            this.dtgMoneda.RowHeadersVisible = false;
-            this.dtgMoneda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgMoneda.Size = new System.Drawing.Size(272, 228);
-            this.dtgMoneda.TabIndex = 7;
-            // 
-            // dtgBillete
-            // 
-            this.dtgBillete.AllowUserToAddRows = false;
-            this.dtgBillete.AllowUserToDeleteRows = false;
-            this.dtgBillete.AllowUserToResizeColumns = false;
-            this.dtgBillete.AllowUserToResizeRows = false;
-            this.dtgBillete.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgBillete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBillete.Location = new System.Drawing.Point(284, 6);
-            this.dtgBillete.MultiSelect = false;
-            this.dtgBillete.Name = "dtgBillete";
-            this.dtgBillete.RowHeadersVisible = false;
-            this.dtgBillete.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgBillete.Size = new System.Drawing.Size(272, 228);
-            this.dtgBillete.TabIndex = 8;
-            // 
-            // txtMonedaSoles
-            // 
-            this.txtMonedaSoles.FormatoDecimal = false;
-            this.txtMonedaSoles.Location = new System.Drawing.Point(156, 240);
-            this.txtMonedaSoles.Name = "txtMonedaSoles";
-            this.txtMonedaSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtMonedaSoles.nNumDecimales = 4;
-            this.txtMonedaSoles.nvalor = 0D;
-            this.txtMonedaSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtMonedaSoles.TabIndex = 9;
-            this.txtMonedaSoles.Text = "0.00";
-            this.txtMonedaSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtBilleteSoles
-            // 
-            this.txtBilleteSoles.FormatoDecimal = false;
-            this.txtBilleteSoles.Location = new System.Drawing.Point(446, 240);
-            this.txtBilleteSoles.Name = "txtBilleteSoles";
-            this.txtBilleteSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtBilleteSoles.nNumDecimales = 4;
-            this.txtBilleteSoles.nvalor = 0D;
-            this.txtBilleteSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtBilleteSoles.TabIndex = 10;
-            this.txtBilleteSoles.Text = "0.00";
-            this.txtBilleteSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtTotalSoles
-            // 
-            this.txtTotalSoles.FormatoDecimal = false;
-            this.txtTotalSoles.Location = new System.Drawing.Point(262, 266);
-            this.txtTotalSoles.Name = "txtTotalSoles";
-            this.txtTotalSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtTotalSoles.nNumDecimales = 4;
-            this.txtTotalSoles.nvalor = 0D;
-            this.txtTotalSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalSoles.TabIndex = 11;
-            this.txtTotalSoles.Text = "0.00";
-            this.txtTotalSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // dtgBilletesDolares
-            // 
-            this.dtgBilletesDolares.AllowUserToAddRows = false;
-            this.dtgBilletesDolares.AllowUserToDeleteRows = false;
-            this.dtgBilletesDolares.AllowUserToResizeColumns = false;
-            this.dtgBilletesDolares.AllowUserToResizeRows = false;
-            this.dtgBilletesDolares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgBilletesDolares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBilletesDolares.Location = new System.Drawing.Point(140, 6);
-            this.dtgBilletesDolares.MultiSelect = false;
-            this.dtgBilletesDolares.Name = "dtgBilletesDolares";
-            this.dtgBilletesDolares.RowHeadersVisible = false;
-            this.dtgBilletesDolares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgBilletesDolares.Size = new System.Drawing.Size(272, 150);
-            this.dtgBilletesDolares.TabIndex = 9;
-            // 
-            // txtBilleteDolares
-            // 
-            this.txtBilleteDolares.FormatoDecimal = false;
-            this.txtBilleteDolares.Location = new System.Drawing.Point(312, 162);
-            this.txtBilleteDolares.Name = "txtBilleteDolares";
-            this.txtBilleteDolares.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtBilleteDolares.nNumDecimales = 4;
-            this.txtBilleteDolares.nvalor = 0D;
-            this.txtBilleteDolares.Size = new System.Drawing.Size(100, 20);
-            this.txtBilleteDolares.TabIndex = 12;
-            this.txtBilleteDolares.Text = "0.00";
-            this.txtBilleteDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtToralDolares
-            // 
-            this.txtToralDolares.FormatoDecimal = false;
-            this.txtToralDolares.Location = new System.Drawing.Point(270, 185);
-            this.txtToralDolares.Name = "txtToralDolares";
-            this.txtToralDolares.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtToralDolares.nNumDecimales = 4;
-            this.txtToralDolares.nvalor = 0D;
-            this.txtToralDolares.Size = new System.Drawing.Size(100, 20);
-            this.txtToralDolares.TabIndex = 13;
-            this.txtToralDolares.Text = "0.00";
-            this.txtToralDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtMontoInicioSoles
-            // 
-            this.txtMontoInicioSoles.FormatoDecimal = false;
-            this.txtMontoInicioSoles.Location = new System.Drawing.Point(109, 5);
-            this.txtMontoInicioSoles.Name = "txtMontoInicioSoles";
-            this.txtMontoInicioSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtMontoInicioSoles.nNumDecimales = 4;
-            this.txtMontoInicioSoles.nvalor = 0D;
-            this.txtMontoInicioSoles.ReadOnly = true;
-            this.txtMontoInicioSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtMontoInicioSoles.TabIndex = 77;
-            this.txtMontoInicioSoles.Text = "0.00";
-            this.txtMontoInicioSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtIngresoSoles
-            // 
-            this.txtIngresoSoles.FormatoDecimal = false;
-            this.txtIngresoSoles.Location = new System.Drawing.Point(174, 195);
-            this.txtIngresoSoles.Name = "txtIngresoSoles";
-            this.txtIngresoSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtIngresoSoles.nNumDecimales = 4;
-            this.txtIngresoSoles.nvalor = 0D;
-            this.txtIngresoSoles.ReadOnly = true;
-            this.txtIngresoSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtIngresoSoles.TabIndex = 78;
-            this.txtIngresoSoles.Text = "0.00";
-            this.txtIngresoSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtEgresosSoles
-            // 
-            this.txtEgresosSoles.FormatoDecimal = false;
-            this.txtEgresosSoles.Location = new System.Drawing.Point(444, 194);
-            this.txtEgresosSoles.Name = "txtEgresosSoles";
-            this.txtEgresosSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtEgresosSoles.nNumDecimales = 4;
-            this.txtEgresosSoles.nvalor = 0D;
-            this.txtEgresosSoles.ReadOnly = true;
-            this.txtEgresosSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtEgresosSoles.TabIndex = 79;
-            this.txtEgresosSoles.Text = "0.00";
-            this.txtEgresosSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSaldoSoles
-            // 
-            this.txtSaldoSoles.FormatoDecimal = false;
-            this.txtSaldoSoles.Location = new System.Drawing.Point(172, 5);
-            this.txtSaldoSoles.Name = "txtSaldoSoles";
-            this.txtSaldoSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtSaldoSoles.nNumDecimales = 4;
-            this.txtSaldoSoles.nvalor = 0D;
-            this.txtSaldoSoles.ReadOnly = true;
-            this.txtSaldoSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtSaldoSoles.TabIndex = 80;
-            this.txtSaldoSoles.Text = "0.00";
-            this.txtSaldoSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSaldoCortSoles
-            // 
-            this.txtSaldoCortSoles.FormatoDecimal = false;
-            this.txtSaldoCortSoles.Location = new System.Drawing.Point(394, 5);
-            this.txtSaldoCortSoles.Name = "txtSaldoCortSoles";
-            this.txtSaldoCortSoles.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtSaldoCortSoles.nNumDecimales = 4;
-            this.txtSaldoCortSoles.nvalor = 0D;
-            this.txtSaldoCortSoles.ReadOnly = true;
-            this.txtSaldoCortSoles.Size = new System.Drawing.Size(100, 20);
-            this.txtSaldoCortSoles.TabIndex = 81;
-            this.txtSaldoCortSoles.Text = "0.00";
-            this.txtSaldoCortSoles.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtDiferencia
-            // 
-            this.txtDiferencia.FormatoDecimal = false;
-            this.txtDiferencia.Location = new System.Drawing.Point(280, 9);
-            this.txtDiferencia.Name = "txtDiferencia";
-            this.txtDiferencia.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtDiferencia.nNumDecimales = 4;
-            this.txtDiferencia.nvalor = 0D;
-            this.txtDiferencia.ReadOnly = true;
-            this.txtDiferencia.Size = new System.Drawing.Size(100, 20);
-            this.txtDiferencia.TabIndex = 82;
-            this.txtDiferencia.Text = "0.00";
-            this.txtDiferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // dtgEgresosSoles
-            // 
-            this.dtgEgresosSoles.AllowUserToAddRows = false;
-            this.dtgEgresosSoles.AllowUserToDeleteRows = false;
-            this.dtgEgresosSoles.AllowUserToResizeColumns = false;
-            this.dtgEgresosSoles.AllowUserToResizeRows = false;
-            this.dtgEgresosSoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgEgresosSoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEgresosSoles.Location = new System.Drawing.Point(276, 45);
-            this.dtgEgresosSoles.MultiSelect = false;
-            this.dtgEgresosSoles.Name = "dtgEgresosSoles";
-            this.dtgEgresosSoles.RowHeadersVisible = false;
-            this.dtgEgresosSoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEgresosSoles.Size = new System.Drawing.Size(275, 152);
-            this.dtgEgresosSoles.TabIndex = 80;
-            // 
-            // dtgIngresosSoles
-            // 
-            this.dtgIngresosSoles.AllowUserToAddRows = false;
-            this.dtgIngresosSoles.AllowUserToDeleteRows = false;
-            this.dtgIngresosSoles.AllowUserToResizeColumns = false;
-            this.dtgIngresosSoles.AllowUserToResizeRows = false;
-            this.dtgIngresosSoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgIngresosSoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgIngresosSoles.Location = new System.Drawing.Point(3, 43);
-            this.dtgIngresosSoles.MultiSelect = false;
-            this.dtgIngresosSoles.Name = "dtgIngresosSoles";
-            this.dtgIngresosSoles.RowHeadersVisible = false;
-            this.dtgIngresosSoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgIngresosSoles.Size = new System.Drawing.Size(272, 152);
-            this.dtgIngresosSoles.TabIndex = 81;
-            // 
-            // dtgIngresosDolares
-            // 
-            this.dtgIngresosDolares.AllowUserToAddRows = false;
-            this.dtgIngresosDolares.AllowUserToDeleteRows = false;
-            this.dtgIngresosDolares.AllowUserToResizeColumns = false;
-            this.dtgIngresosDolares.AllowUserToResizeRows = false;
-            this.dtgIngresosDolares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgIngresosDolares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgIngresosDolares.Location = new System.Drawing.Point(3, 43);
-            this.dtgIngresosDolares.MultiSelect = false;
-            this.dtgIngresosDolares.Name = "dtgIngresosDolares";
-            this.dtgIngresosDolares.RowHeadersVisible = false;
-            this.dtgIngresosDolares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgIngresosDolares.Size = new System.Drawing.Size(272, 146);
-            this.dtgIngresosDolares.TabIndex = 89;
-            // 
-            // dtgEgresosDolares
-            // 
-            this.dtgEgresosDolares.AllowUserToAddRows = false;
-            this.dtgEgresosDolares.AllowUserToDeleteRows = false;
-            this.dtgEgresosDolares.AllowUserToResizeColumns = false;
-            this.dtgEgresosDolares.AllowUserToResizeRows = false;
-            this.dtgEgresosDolares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgEgresosDolares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEgresosDolares.Location = new System.Drawing.Point(276, 43);
-            this.dtgEgresosDolares.MultiSelect = false;
-            this.dtgEgresosDolares.Name = "dtgEgresosDolares";
-            this.dtgEgresosDolares.RowHeadersVisible = false;
-            this.dtgEgresosDolares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEgresosDolares.Size = new System.Drawing.Size(274, 146);
-            this.dtgEgresosDolares.TabIndex = 88;
-            // 
-            // txtSaldoOpeDolares
-            // 
-            this.txtSaldoOpeDolares.FormatoDecimal = false;
-            this.txtSaldoOpeDolares.Location = new System.Drawing.Point(171, 5);
-            this.txtSaldoOpeDolares.Name = "txtSaldoOpeDolares";
-            this.txtSaldoOpeDolares.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtSaldoOpeDolares.nNumDecimales = 4;
-            this.txtSaldoOpeDolares.nvalor = 0D;
-            this.txtSaldoOpeDolares.ReadOnly = true;
-            this.txtSaldoOpeDolares.Size = new System.Drawing.Size(100, 20);
-            this.txtSaldoOpeDolares.TabIndex = 90;
-            this.txtSaldoOpeDolares.Text = "0.00";
-            this.txtSaldoOpeDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label23.Text = "Saldo Total Dólares";
             // 
             // txtSaldoCortDolares
             // 
@@ -988,119 +974,154 @@
             this.txtSaldoCortDolares.Text = "0.00";
             this.txtSaldoCortDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtIngresoDolares
+            // txtSaldoOpeDolares
             // 
-            this.txtIngresoDolares.FormatoDecimal = false;
-            this.txtIngresoDolares.Location = new System.Drawing.Point(173, 195);
-            this.txtIngresoDolares.Name = "txtIngresoDolares";
-            this.txtIngresoDolares.nDecValor = new decimal(new int[] {
+            this.txtSaldoOpeDolares.FormatoDecimal = false;
+            this.txtSaldoOpeDolares.Location = new System.Drawing.Point(171, 5);
+            this.txtSaldoOpeDolares.Name = "txtSaldoOpeDolares";
+            this.txtSaldoOpeDolares.nDecValor = new decimal(new int[] {
             0,
             0,
             0,
             131072});
-            this.txtIngresoDolares.nNumDecimales = 4;
-            this.txtIngresoDolares.nvalor = 0D;
-            this.txtIngresoDolares.ReadOnly = true;
-            this.txtIngresoDolares.Size = new System.Drawing.Size(100, 20);
-            this.txtIngresoDolares.TabIndex = 92;
-            this.txtIngresoDolares.Text = "0.00";
-            this.txtIngresoDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSaldoOpeDolares.nNumDecimales = 4;
+            this.txtSaldoOpeDolares.nvalor = 0D;
+            this.txtSaldoOpeDolares.ReadOnly = true;
+            this.txtSaldoOpeDolares.Size = new System.Drawing.Size(100, 20);
+            this.txtSaldoOpeDolares.TabIndex = 90;
+            this.txtSaldoOpeDolares.Text = "0.00";
+            this.txtSaldoOpeDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtEgresoDolares
+            // label24
             // 
-            this.txtEgresoDolares.FormatoDecimal = false;
-            this.txtEgresoDolares.Location = new System.Drawing.Point(447, 195);
-            this.txtEgresoDolares.Name = "txtEgresoDolares";
-            this.txtEgresoDolares.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtEgresoDolares.nNumDecimales = 4;
-            this.txtEgresoDolares.nvalor = 0D;
-            this.txtEgresoDolares.ReadOnly = true;
-            this.txtEgresoDolares.Size = new System.Drawing.Size(100, 20);
-            this.txtEgresoDolares.TabIndex = 93;
-            this.txtEgresoDolares.Text = "0.00";
-            this.txtEgresoDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(90, 198);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(77, 13);
+            this.label24.TabIndex = 81;
+            this.label24.Text = "Total Ingresos:";
             // 
-            // txtInicioDolares
+            // label9
             // 
-            this.txtInicioDolares.FormatoDecimal = false;
-            this.txtInicioDolares.Location = new System.Drawing.Point(123, 6);
-            this.txtInicioDolares.Name = "txtInicioDolares";
-            this.txtInicioDolares.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtInicioDolares.nNumDecimales = 4;
-            this.txtInicioDolares.nvalor = 0D;
-            this.txtInicioDolares.ReadOnly = true;
-            this.txtInicioDolares.Size = new System.Drawing.Size(100, 20);
-            this.txtInicioDolares.TabIndex = 94;
-            this.txtInicioDolares.Text = "0.00";
-            this.txtInicioDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Monto Inicio Dólares:";
             // 
-            // txtDiferenciaDolares
+            // lblTitulo
             // 
-            this.txtDiferenciaDolares.FormatoDecimal = false;
-            this.txtDiferenciaDolares.Location = new System.Drawing.Point(280, 9);
-            this.txtDiferenciaDolares.Name = "txtDiferenciaDolares";
-            this.txtDiferenciaDolares.nDecValor = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.txtDiferenciaDolares.nNumDecimales = 4;
-            this.txtDiferenciaDolares.nvalor = 0D;
-            this.txtDiferenciaDolares.ReadOnly = true;
-            this.txtDiferenciaDolares.Size = new System.Drawing.Size(100, 20);
-            this.txtDiferenciaDolares.TabIndex = 92;
-            this.txtDiferenciaDolares.Text = "0.00";
-            this.txtDiferenciaDolares.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblTitulo.BackColor = System.Drawing.Color.Teal;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(7, 73);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(575, 21);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "REGISTRO DE BILLETAJE";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtUsuario);
+            this.groupBox1.Controls.Add(this.dtpFechaCuadre);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(52, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(439, 63);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos del Usuario";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(91, 38);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ReadOnly = true;
+            this.txtUsuario.Size = new System.Drawing.Size(342, 20);
+            this.txtUsuario.TabIndex = 3;
+            // 
+            // dtpFechaCuadre
+            // 
+            this.dtpFechaCuadre.Enabled = false;
+            this.dtpFechaCuadre.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaCuadre.Location = new System.Drawing.Point(91, 16);
+            this.dtpFechaCuadre.Name = "dtpFechaCuadre";
+            this.dtpFechaCuadre.Size = new System.Drawing.Size(98, 20);
+            this.dtpFechaCuadre.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Usuario:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Fecha Cuadre:";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(506, 459);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "&Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmCuadreCierreOpe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 487);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmCuadreCierreOpe";
             this.Text = "Cuadre y Cierre de Operaciones";
+            this.Load += new System.EventHandler(this.frmCuadreCierreOpe_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabBilletaje.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBillete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMoneda)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBilletesDolares)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabCuadre.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgIngresosSoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEgresosSoles)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgIngresosDolares)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEgresosDolares)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMoneda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBillete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBilletesDolares)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEgresosSoles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgIngresosSoles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgIngresosDolares)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEgresosDolares)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

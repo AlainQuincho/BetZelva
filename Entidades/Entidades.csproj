@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="clsFormatoXML.cs" />
     <Compile Include="clsGENConexion.cs" />
     <Compile Include="clsPassword.cs" />
     <Compile Include="clsUsuario.cs" />
