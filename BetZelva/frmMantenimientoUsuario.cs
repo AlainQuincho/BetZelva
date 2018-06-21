@@ -77,8 +77,8 @@ namespace BetZelva
             dtgUsuarios.Columns["cApellidos"].HeaderText = "Apellido";
             dtgUsuarios.Columns["cDNI"].HeaderText      = "DNI";
 
-            dtgUsuarios.Columns["cNombre"].Width = 130;
-            dtgUsuarios.Columns["cApellidos"].Width = 130;
+            //dtgUsuarios.Columns["cNombre"].Width = 130;
+            //dtgUsuarios.Columns["cApellidos"].Width = 130;
             //dtgUsuarios.Columns["cDNI"].Width = 30;
 
             dtgUsuarios.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -126,7 +126,6 @@ namespace BetZelva
             btnEditar.Enabled = false;
             btnCancelar.Enabled = false;
             btnGuardar.Enabled = false;
-
         }
 
         private bool ValidaControles()

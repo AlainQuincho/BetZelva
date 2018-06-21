@@ -52,6 +52,9 @@ namespace BetZelva
                 {
                     var ronda = _listaRondas.FirstOrDefault();
                     lblRondaApuesta.Text = ronda.NombreRonda;
+                    lblMulLocal.Text = ronda.MultiplicadorLocal;
+                    lblMulVisita.Text = ronda.MultiplicadorVisita;
+                    lblMulEmpate.Text = ronda.MultiplicadorEmpate;
 
                     _ronda = ronda.IdRonda;
 
@@ -68,6 +71,10 @@ namespace BetZelva
                 {
                     var ronda = _listaRondas.FirstOrDefault(x => x.IdRonda > _ronda);
                     lblRondaApuesta.Text = ronda.NombreRonda;
+                    lblMulLocal.Text = ronda.MultiplicadorLocal;
+                    lblMulVisita.Text = ronda.MultiplicadorVisita;
+                    lblMulEmpate.Text = ronda.MultiplicadorEmpate;
+
                     _ronda = ronda.IdRonda;
 
                     _fila = 0;
@@ -80,6 +87,11 @@ namespace BetZelva
             }
             else
             {
+                lblRondaApuesta.Text = @"--- . ---";
+                lblMulLocal.Text = @"--.--";
+                lblMulVisita.Text = @"--.--";
+                lblMulEmpate.Text = @"--.--";
+
                 timer.Enabled = true;
                 timer.Interval = 2000;
             }
@@ -119,6 +131,7 @@ namespace BetZelva
             timerParticipantes.Enabled = true;
             timerParticipantes.Interval = 2000;
         }
+        
 
         private void timer_Tick(object sender, EventArgs e)
         {

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscaEncuentro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscaEncuentro.resx">
       <DependentUpon>frmBuscaEncuentro.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,11 +232,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="conexion.xml" />
+    <None Include="Resources\24_Tv.png" />
+    <None Include="Resources\24_Cancelar.png" />
+    <None Include="Resources\24_Editar.png" />
+    <None Include="Resources\24_Grabar.png" />
+    <None Include="Resources\24_Nuevo.png" />
+    <None Include="Resources\24_Volver.png" />
+    <None Include="Resources\24_Usuario.png" />
+    <None Include="Resources\24_Registra.png" />
+    <None Include="Resources\24_Iniciar.png" />
+    <None Include="Resources\24_Buscar.png" />
+    <None Include="Resources\16_Buscar.png" />
     <Content Include="Resources\boss_man-128.png" />
+    <None Include="Resources\boton-de-apagado.png" />
     <Content Include="Resources\btnMaximizar.png" />
     <Content Include="Resources\btnMinimizar.png" />
     <Content Include="Resources\btnRestaurar.png" />
     <Content Include="Resources\btnSalir.png" />
+    <None Include="Resources\casa.png" />
     <Content Include="Resources\Clientes.png" />
     <Content Include="Resources\compras.png" />
     <Content Include="Resources\empleados.png" />
@@ -241,9 +263,11 @@
     <Content Include="Resources\logo5.png" />
     <None Include="Resources\LogoCafe.png" />
     <Content Include="Resources\marca.png" />
+    <None Include="Resources\marcador-empatado.png" />
     <Content Include="Resources\MiniLogo.png" />
     <Content Include="Resources\Mobile-Menu-Icon.png" />
     <Content Include="Resources\pagos.png" />
+    <None Include="Resources\pin.png" />
     <Content Include="Resources\prodcutos.png" />
     <Content Include="Resources\reloj.png" />
     <Content Include="Resources\ventas.png" />

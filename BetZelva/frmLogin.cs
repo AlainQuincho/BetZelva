@@ -104,7 +104,7 @@ namespace BetZelva
 
             if (lAutenticado)
             {
-                MessageBox.Show("Bienvenido!!!", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Bienvenido!!!", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
 
                 new AdVarGlobal().AdCargaVariables(); // carga variables globales

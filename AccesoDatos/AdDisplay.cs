@@ -22,6 +22,9 @@ namespace AccesoDatos
                 {
                     IdRonda = row.Field<int>("IdRonda"),
                     NombreRonda = row.Field<string>("NombreRonda"),
+                    MultiplicadorLocal = row.Field<string>("MultiplicadorLocal"),
+                    MultiplicadorVisita = row.Field<string>("MultiplicadorVisita"),
+                    MultiplicadorEmpate = row.Field<string>("MultiplicadorEmpate"),
                     Participantes = AdListaParticipantes(row.Field<int>("IdRonda"))
                 });
             }
