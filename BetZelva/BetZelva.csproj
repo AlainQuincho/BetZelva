@@ -114,11 +114,23 @@
     <Compile Include="frmRegistroEncuentro.Designer.cs">
       <DependentUpon>frmRegistroEncuentro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRetiroCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRetiroCaja.Designer.cs">
+      <DependentUpon>frmRetiroCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRondasApuesta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRondasApuesta.Designer.cs">
       <DependentUpon>frmRondasApuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalidaCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalidaCaja.Designer.cs">
+      <DependentUpon>frmSalidaCaja.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,8 +167,14 @@
     <EmbeddedResource Include="frmRegistroEncuentro.resx">
       <DependentUpon>frmRegistroEncuentro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRetiroCaja.resx">
+      <DependentUpon>frmRetiroCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRondasApuesta.resx">
       <DependentUpon>frmRondasApuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalidaCaja.resx">
+      <DependentUpon>frmSalidaCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
