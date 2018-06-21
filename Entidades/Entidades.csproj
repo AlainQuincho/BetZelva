@@ -41,9 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+
     <Compile Include="clsFormatoXML.cs" />
-=======
     <Compile Include="clsGENConexion.cs" />
     <Compile Include="clsPassword.cs" />
     <Compile Include="clsUsuario.cs" />
@@ -51,7 +50,6 @@
     <Compile Include="ConfiguraApuesta.cs" />
     <Compile Include="Equipo.cs" />
     <Compile Include="ParticipantesRondaView.cs" />
->>>>>>> 6beb3b7bd171a37b00456c4f835dba7745e58a40
     <Compile Include="Perfil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultadoApuesta.cs" />
