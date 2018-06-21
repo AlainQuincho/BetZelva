@@ -15,10 +15,10 @@ namespace AccesoDatos
         GenEjeSp _EjecSP = new GenEjeSp();
         public string RegistroUsuario(string cNombre , string Apellidos , string Direccion , 
                 string CorreoElectronico , string DNI , string cCelular, ref int idMensaje, int idUsuarioReg,
-                int idPerfil)
+                int idPerfil, string User)
         {
             var TB = _EjecSP.EjecSp("InsertaUsuarios_SP", cNombre, Apellidos, Direccion, CorreoElectronico, 
-                                                          DNI, cCelular, idUsuarioReg, idPerfil);
+                                                          DNI, cCelular, idUsuarioReg, idPerfil, User);
 
             #region Comentado
             //foreach(DataRow Row in TB.Rows)
@@ -70,10 +70,10 @@ namespace AccesoDatos
 
         public string ActualizarUsuario(string cNombre, string Apellidos, string Direccion,
                 string CorreoElectronico, string DNI, string cCelular, ref int idMensaje, bool lVigente, 
-                int idUsuario ,int idUsuarioMod, int idPerfil)
+                int idUsuario ,int idUsuarioMod, int idPerfil, string User)
         {
             var TB = _EjecSP.EjecSp("ActualizaUsuario_SP", cNombre, Apellidos, Direccion, CorreoElectronico, DNI, 
-                                                           cCelular,lVigente, idUsuario ,idUsuarioMod, idPerfil);
+                                                           cCelular,lVigente, idUsuario ,idUsuarioMod, idPerfil, User);
 
 
             string Msj = TB.Rows[0]["cMensaje"].ToString();

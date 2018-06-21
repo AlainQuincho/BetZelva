@@ -101,16 +101,17 @@ namespace BetZelva
             int idUsuarioSis = VarGlobal.SysUser.idUsuario;
             int idPerfil = (int)(cboPerfil.SelectedValue);
             string Rpta = "";
+            string User = txtUsuario.Text;
 
             if (Tipo.Equals("A"))
             {
                 int index = dtgUsuarios.CurrentRow.Index;
                 int idUsuario = Convert.ToInt32(dtgUsuarios.Rows[index].Cells["idUsuario"].Value);
-                Rpta = _Accion.ActualizarUsuario(Nombres, Apellidos, Direccion, CorreoElectronico, DNI, Celular, ref idMensaje,Vigente, idUsuario, idUsuarioSis, idPerfil);
+                Rpta = _Accion.ActualizarUsuario(Nombres, Apellidos, Direccion, CorreoElectronico, DNI, Celular, ref idMensaje,Vigente, idUsuario, idUsuarioSis, idPerfil, User);
             }
             if(Tipo.Equals("N"))
             {
-                Rpta = _Accion.RegistroUsuario(Nombres,Apellidos,Direccion,CorreoElectronico,DNI,Celular,ref idMensaje, idUsuarioSis, idPerfil);
+                Rpta = _Accion.RegistroUsuario(Nombres,Apellidos,Direccion,CorreoElectronico,DNI,Celular,ref idMensaje, idUsuarioSis, idPerfil, User);
             }
             if (idMensaje != 0)
                 MessageBox.Show(Rpta, "Registro de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -224,6 +225,7 @@ namespace BetZelva
             txtCelular.Clear();
             cboPerfil.SelectedIndex = -1;
             chcVigente.Checked = false;
+            txtUsuario.Clear();
         }
 
         private void HabilitarControles(bool val)
@@ -293,6 +295,28 @@ namespace BetZelva
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void EscribeUsuario()
+        {
+            string Usuario = "";
+            // El usuario esta conformado por nombre + 4 ultimos digitos del DNI
+            Usuario = txtNombres.Text + txtDNI.Text.Substring(6,2);
+            txtUsuario.Text = Usuario;
+        }
+
+        private void txtNombres_TextChanged(object sender, EventArgs e)
+        {
+            EscribeUsuario();
+        }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+            EscribeUsuario();
         }
     }
 }

@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +54,12 @@
     <Compile Include="frmBuscaEncuentro.Designer.cs">
       <DependentUpon>frmBuscaEncuentro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCierreApuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCierreApuesta.Designer.cs">
+      <DependentUpon>frmCierreApuesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmControlDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +71,12 @@
     </Compile>
     <Compile Include="frmCuadreCierreOpe.Designer.cs">
       <DependentUpon>frmCuadreCierreOpe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisplayGanadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisplayGanadores.Designer.cs">
+      <DependentUpon>frmDisplayGanadores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInicioOperaciones.cs">
       <SubType>Form</SubType>
@@ -101,10 +114,31 @@
     <Compile Include="frmRegistroEncuentro.Designer.cs">
       <DependentUpon>frmRegistroEncuentro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRetiroCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRetiroCaja.Designer.cs">
+      <DependentUpon>frmRetiroCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRondasApuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRondasApuesta.Designer.cs">
+      <DependentUpon>frmRondasApuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalidaCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalidaCaja.Designer.cs">
+      <DependentUpon>frmSalidaCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBuscaEncuentro.resx">
       <DependentUpon>frmBuscaEncuentro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCierreApuesta.resx">
+      <DependentUpon>frmCierreApuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmControlDisplay.resx">
       <DependentUpon>frmControlDisplay.cs</DependentUpon>
@@ -114,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCuadreCierreOpe.resx">
       <DependentUpon>frmCuadreCierreOpe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisplayGanadores.resx">
+      <DependentUpon>frmDisplayGanadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioOperaciones.resx">
       <DependentUpon>frmInicioOperaciones.cs</DependentUpon>
@@ -129,6 +166,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistroEncuentro.resx">
       <DependentUpon>frmRegistroEncuentro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRetiroCaja.resx">
+      <DependentUpon>frmRetiroCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRondasApuesta.resx">
+      <DependentUpon>frmRondasApuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalidaCaja.resx">
+      <DependentUpon>frmSalidaCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,6 +212,33 @@
       <Project>{9f0bc989-e0d8-4882-9464-ae6d8a51ac2a}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="conexion.xml" />
+    <Content Include="Resources\boss_man-128.png" />
+    <Content Include="Resources\btnMaximizar.png" />
+    <Content Include="Resources\btnMinimizar.png" />
+    <Content Include="Resources\btnRestaurar.png" />
+    <Content Include="Resources\btnSalir.png" />
+    <Content Include="Resources\Clientes.png" />
+    <Content Include="Resources\compras.png" />
+    <Content Include="Resources\empleados.png" />
+    <Content Include="Resources\icon cerrar2.png" />
+    <Content Include="Resources\icon maximizar.png" />
+    <Content Include="Resources\icon minimizar.png" />
+    <Content Include="Resources\icon restaurar.png" />
+    <Content Include="Resources\IconoCalculadora.png" />
+    <Content Include="Resources\IconoMiniVentas.png" />
+    <Content Include="Resources\Logo.png" />
+    <Content Include="Resources\logo5.png" />
+    <None Include="Resources\LogoCafe.png" />
+    <Content Include="Resources\marca.png" />
+    <Content Include="Resources\MiniLogo.png" />
+    <Content Include="Resources\Mobile-Menu-Icon.png" />
+    <Content Include="Resources\pagos.png" />
+    <Content Include="Resources\prodcutos.png" />
+    <Content Include="Resources\reloj.png" />
+    <Content Include="Resources\ventas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

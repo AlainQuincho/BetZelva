@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Xml;
 using System.Configuration;
+using Entidades;
 
 namespace Helper
 {
@@ -61,7 +62,7 @@ namespace Helper
             {
                 lstParams.Connection = con;
 
-                lstParams.CommandText = "BET_LstParamsxSP_SP";
+                lstParams.CommandText = "GEN_LstParamsxSP_SP";
                 lstParams.CommandType = CommandType.StoredProcedure;
                 lstParams.Parameters.Add(new SqlParameter("@x_cNombreSP", nombreSp));
                 SqlDataReader parametersReader = lstParams.ExecuteReader();
@@ -282,18 +283,17 @@ namespace Helper
         }
         private string GetConnectionString()
         {
-
-            SqlConnectionStringBuilder cnBuilder = new SqlConnectionStringBuilder();
-            cnBuilder.DataSource = "jhak.database.windows.net";
-            cnBuilder.InitialCatalog = "BdBetZelva";
-            cnBuilder.IntegratedSecurity = false;
-            cnBuilder.UserID = "jhak";
-            cnBuilder.Password = "jh@k1234";
-
-            return cnBuilder.ToString();
-
-            //var stringConf = ConfigurationManager.ConnectionStrings["cadenaFacturador"].ConnectionString;
-            //return stringConf;
+            #region Comentado
+            //SqlConnectionStringBuilder cnBuilder = new SqlConnectionStringBuilder();
+            //cnBuilder.DataSource = "jhak.database.windows.net";
+            //cnBuilder.InitialCatalog = "BdBetZelva";
+            //cnBuilder.IntegratedSecurity = false;
+            //cnBuilder.UserID = "jhak";
+            //cnBuilder.Password = "jh@k1234";
+            //return cnBuilder.ToString();
+            #endregion 
+            string CadenaConexion = clsVarGlobal.cConexString;
+            return CadenaConexion;
         }
         private DataTable estructuraVacia()
         {

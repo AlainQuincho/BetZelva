@@ -45,7 +45,14 @@
     <Compile Include="GeneraXml.cs" />
     <Compile Include="GenParametros.cs" />
     <Compile Include="GenParams.cs" />
+    <Compile Include="JsonReady.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{9f0bc989-e0d8-4882-9464-ae6d8a51ac2a}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
