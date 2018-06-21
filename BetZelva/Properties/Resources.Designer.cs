@@ -223,19 +223,9 @@ namespace BetZelva.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo5 {
+        internal static System.Drawing.Bitmap LogoCafe {
             get {
-                object obj = ResourceManager.GetObject("logo5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap marca {
-            get {
-                object obj = ResourceManager.GetObject("marca", resourceCulture);
+                object obj = ResourceManager.GetObject("LogoCafe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

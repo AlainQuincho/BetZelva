@@ -8,6 +8,7 @@ using System.DirectoryServices;
 using System.Data.SqlClient;
 using System.IO;
 using System.Diagnostics;
+using System.Drawing;
 using System.Security.Cryptography;
 
 
@@ -54,9 +55,7 @@ namespace BetZelva
 
         private void FrmAcceso_Load(object sender, EventArgs e)
         {
-            txtContraseña.Clear();
-            txtUsuario.Clear();
-
+            btnIngresar.Enabled = true;
         }
 
         private bool Validar()
@@ -96,9 +95,9 @@ namespace BetZelva
                 }
                 else
                 {
-                    txtUsuario.Text = "";
-                    txtContraseña.Text = "";
-                    txtUsuario.Focus();
+                    txtUsuario.Text = "USUARIO";
+                    txtContraseña.Text = "PASSWORD";
+                    btnIngresar.Focus();
                     return;
                 }
             }
@@ -111,8 +110,8 @@ namespace BetZelva
                 new AdVarGlobal().AdCargaVariables(); // carga variables globales
 
                 //TODO: Abre contenedor (inicializa panel principal)
-                //frmContenedor frmPrincipal = new frmContenedor(this);
-                //frmPrincipal.Show();
+                Form frmPrincipal = new frmMenuPrincipal();
+                frmPrincipal.Show();
             }
             
         }
@@ -130,6 +129,55 @@ namespace BetZelva
             //txtContNue.Text = "";
             //txtContNueCon.Text = "";
             //txtContAct.Focus();
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "USUARIO")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsuario.Text))
+            {
+                txtUsuario.Text = "USUARIO";
+                txtUsuario.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "PASSWORD")
+            {
+                txtContraseña.Text = "";
+                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtContraseña.Text))
+            {
+                txtContraseña.Text = "PASSWORD";
+                txtContraseña.ForeColor = Color.DimGray;
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.Close();
         }
     }
     #region Clases

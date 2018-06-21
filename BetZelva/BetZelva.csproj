@@ -72,6 +72,12 @@
     <Compile Include="frmCuadreCierreOpe.Designer.cs">
       <DependentUpon>frmCuadreCierreOpe.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDisplayGanadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisplayGanadores.Designer.cs">
+      <DependentUpon>frmDisplayGanadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioOperaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCuadreCierreOpe.resx">
       <DependentUpon>frmCuadreCierreOpe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisplayGanadores.resx">
+      <DependentUpon>frmDisplayGanadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioOperaciones.resx">
       <DependentUpon>frmInicioOperaciones.cs</DependentUpon>
@@ -204,6 +213,7 @@
     <Content Include="Resources\IconoMiniVentas.png" />
     <Content Include="Resources\Logo.png" />
     <Content Include="Resources\logo5.png" />
+    <None Include="Resources\LogoCafe.png" />
     <Content Include="Resources\marca.png" />
     <Content Include="Resources\MiniLogo.png" />
     <Content Include="Resources\Mobile-Menu-Icon.png" />
