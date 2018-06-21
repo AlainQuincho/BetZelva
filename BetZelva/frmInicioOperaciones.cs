@@ -48,8 +48,8 @@ namespace BetZelva
                 if (tbSaldos.Rows.Count > 0)
                 {
                     txtInicioSoles.Text = tbSaldos.Rows[0]["nMontoCieSol"].ToString();
-                    txtInicioDolares.Text = tbSaldos.Rows[1]["nMontoCieDol"].ToString();
-                }
+                txtInicioDolares.Text = tbSaldos.Rows[1]["nMontoCieDol"].ToString();
+            }
                 else
                 {
                 txtInicioSoles.Text = "0.00";
