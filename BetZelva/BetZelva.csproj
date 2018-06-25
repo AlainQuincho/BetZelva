@@ -183,9 +183,6 @@
     <EmbeddedResource Include="frmControlDisplay.resx">
       <DependentUpon>frmControlDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmControlPresentacion.resx">
-      <DependentUpon>frmControlPresentacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCuadreCierreOpe.resx">
       <DependentUpon>frmCuadreCierreOpe.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +262,10 @@
     <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{b282d745-d4c0-4371-af9e-dda9d3be5183}</Project>
       <Name>Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reporteaddor\Reporteador.csproj">
+      <Project>{42c5e5b7-4fe2-40e8-b389-150014630eab}</Project>
+      <Name>Reporteador</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
