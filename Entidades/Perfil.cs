@@ -11,5 +11,6 @@ namespace Entidades
         public int idPerfil { get; set; }
         public string cPerfil { get; set; }
         public bool lVigente { get; set; }
+        // perro aqui un cambio 
     }
 }
