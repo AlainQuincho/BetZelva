@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using AccesoDatos;
+using MessageBoxExample;
 
 namespace BetZelva
 {
@@ -23,7 +24,6 @@ namespace BetZelva
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
             this.Close();
         }
 
@@ -67,6 +67,7 @@ namespace BetZelva
             foreach(DataGridViewColumn Column in dtgUsuarios.Columns)
             {
                 Column.Visible = false;
+                Column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
 
             dtgUsuarios.Columns["cNombre"].Visible   = true;
@@ -77,8 +78,8 @@ namespace BetZelva
             dtgUsuarios.Columns["cApellidos"].HeaderText = "Apellido";
             dtgUsuarios.Columns["cDNI"].HeaderText      = "DNI";
 
-            //dtgUsuarios.Columns["cNombre"].Width = 130;
-            //dtgUsuarios.Columns["cApellidos"].Width = 130;
+            dtgUsuarios.Columns["cNombre"].Width = 180;
+            dtgUsuarios.Columns["cApellidos"].Width = 180;
             //dtgUsuarios.Columns["cDNI"].Width = 30;
 
             dtgUsuarios.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -114,9 +115,9 @@ namespace BetZelva
                 Rpta = _Accion.RegistroUsuario(Nombres,Apellidos,Direccion,CorreoElectronico,DNI,Celular,ref idMensaje, idUsuarioSis, idPerfil, User);
             }
             if (idMensaje != 0)
-                MessageBox.Show(Rpta, "Registro de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show(Rpta, "Registro de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
-                MessageBox.Show(Rpta, "Registro de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MyMessageBox.Show(Rpta, "Registro de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Tipo = "";
             CargaUsuarios();
             HabilitarControles(false);
@@ -126,6 +127,7 @@ namespace BetZelva
             btnEditar.Enabled = false;
             btnCancelar.Enabled = false;
             btnGuardar.Enabled = false;
+
         }
 
         private bool ValidaControles()
@@ -170,7 +172,7 @@ namespace BetZelva
 
             if(!string.IsNullOrEmpty(Msj))
             {
-                MessageBox.Show(Msj, "Mantenimiento de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show(Msj, "Mantenimiento de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return false;
         }
@@ -304,7 +306,13 @@ namespace BetZelva
         {
             string Usuario = "";
             // El usuario esta conformado por nombre + 4 ultimos digitos del DNI
-            Usuario = txtNombres.Text + txtDNI.Text.Substring(6,2);
+            int nLong = txtDNI.Text.Length;
+            if(nLong > 0 )
+            {
+                Usuario = txtNombres.Text + txtDNI.Text.Substring(6, 2);
+            }
+
+            
             txtUsuario.Text = Usuario;
         }
 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using AccesoDatos;
+using MessageBoxExample;
 
 namespace BetZelva
 {
@@ -80,6 +81,18 @@ namespace BetZelva
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
+            if(string.IsNullOrEmpty(cboLocal.SelectedText))
+            {
+                MyMessageBox.Show("Debe seleccionar un equipo local", "Ronde apuestas", MessageBoxButtons.OK);
+                return;
+            }
+            if(string.IsNullOrEmpty(cboVisita.SelectedText))
+            {
+                MyMessageBox.Show("Debe seleccionar un equipo visita", "Ronde apuestas", MessageBoxButtons.OK);
+                return;
+            }
+
             #region Agregar
             if (!_Accion.Equals("N"))
             {
@@ -248,7 +261,11 @@ namespace BetZelva
             //logica de guardado
             if (ValidaGuardar())
                 return;
-            string XML = "";
+            DataTable TablaApuesta = ConvertToDataTable<ConfiguraApuesta>(_ListaConfiguracion);
+
+            DataSet ds = new DataSet("dsConfiguracionApuesta");
+            ds.Tables.Add(TablaApuesta);
+            string XML = ds.GetXml();
 
             int idUsuario = VarGlobal.SysUser.idUsuario;
             DateTime dFechaSys = VarGlobal.dFechaSys;
@@ -263,7 +280,7 @@ namespace BetZelva
                 Rtpa = _Ronda.ActualizaConfiguracion(XML, idUsuario, dFechaSys);
             }
 
-            MessageBox.Show(Rtpa, "Guarda configuracion de apuestas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MyMessageBox.Show(Rtpa, "Guarda configuracion de apuestas", MessageBoxButtons.OK, MessageBoxIcon.Information);
               
             _Accion = "";
             HabilitaControles(false);
@@ -286,10 +303,33 @@ namespace BetZelva
 
             if (!MSJ.Equals(""))
             {
-                MessageBox.Show(MSJ, "Guardar configuración de apuestas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show(MSJ, "Guardar configuración de apuestas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return false;
 
+        }
+
+        public DataTable ConvertToDataTable<T>(IList<T> data)
+        {
+            PropertyDescriptorCollection properties =
+               TypeDescriptor.GetProperties(typeof(T));
+            DataTable table = new DataTable();
+            foreach (PropertyDescriptor prop in properties)
+                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+            foreach (T item in data)
+            {
+                DataRow row = table.NewRow();
+                foreach (PropertyDescriptor prop in properties)
+                    row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                table.Rows.Add(row);
+            }
+            return table;
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

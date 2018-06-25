@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using AccesoDatos;
+using MessageBoxExample;
+using Microsoft.Reporting.WinForms;
+using Reporteaddor;
 
 namespace BetZelva
 {
@@ -10,6 +14,7 @@ namespace BetZelva
         #region VARIABLES GLOBALES
         int idConfiguraciones = 0;
         #endregion
+
         #region MÉTODOS
         public frmRegistroEncuentro()
         {
@@ -58,7 +63,8 @@ namespace BetZelva
                         txtnAnotacionLocal.Enabled = true;
                         txtnAnotacionVisita.Enabled = true;
                         txtnMontoApuesta.Enabled = true;
-                        grbDatosCliente.Enabled = true;
+                        //grbDatosCliente.Enabled = true;
+                        HabilitarControlesDatosCliente(true);
                         btnCancelar.Enabled = true;
                         btnGrabar.Enabled = true;
                         break;
@@ -67,7 +73,8 @@ namespace BetZelva
                         txtnAnotacionLocal.Enabled = false;
                         txtnAnotacionVisita.Enabled = false;
                         txtnMontoApuesta.Enabled = false;
-                        grbDatosCliente.Enabled = false;
+                        //grbDatosCliente.Enabled = false;
+                        HabilitarControlesDatosCliente(false);
                         btnCancelar.Enabled = false;
                         btnGrabar.Enabled = false;
                         btnNuevo.Enabled = false;
@@ -77,7 +84,8 @@ namespace BetZelva
                         txtnAnotacionLocal.Enabled = false;
                         txtnAnotacionVisita.Enabled = false;
                         txtnMontoApuesta.Enabled = false;
-                        grbDatosCliente.Enabled = false;
+                        //grbDatosCliente.Enabled = false;
+                        HabilitarControlesDatosCliente(false);
                         btnCancelar.Enabled = false;
                         btnGrabar.Enabled = false;
                         btnNuevo.Enabled = true;
@@ -121,54 +129,54 @@ namespace BetZelva
             bool lTrue = true;
             if (string.IsNullOrEmpty(txtCodEncuentro.Text))
             {
-                MessageBox.Show("Por favor buscar código de encuentro", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("Por favor buscar código de encuentro", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lTrue = false;
             }
             else if (string.IsNullOrEmpty(txtnAnotacionLocal.Text))
             {
-                MessageBox.Show("La anotación del equipo local no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("La anotación del equipo local no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtnAnotacionLocal.Focus();
                 lTrue = false;
             }
             else if (string.IsNullOrEmpty(txtnAnotacionVisita.Text))
             {
-                MessageBox.Show("La anotación del equipo local no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("La anotación del equipo local no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtnAnotacionVisita.Focus();
                 lTrue = false;
             }
             else if (string.IsNullOrEmpty(txtnMontoApuesta.Text))
             {
-                MessageBox.Show("El monto de apuesta no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("El monto de apuesta no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtnMontoApuesta.Focus();
                 lTrue = false;
             }
             else if (Convert.ToDecimal(txtnMontoApuesta.Text)==0)
             {
-                MessageBox.Show("El monto de apuesta debe ser mayor a 0", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("El monto de apuesta debe ser mayor a 0", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtnMontoApuesta.Focus();
                 lTrue = false;
             }
             else if (string.IsNullOrEmpty(txtcApellidoPat.Text))
             {
-                MessageBox.Show("El apellido paterno del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("El apellido paterno del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtcApellidoPat.Focus();
                 lTrue = false;
             }
             else if (string.IsNullOrEmpty(txtcApellidoMat.Text))
             {
-                MessageBox.Show("El apellido materno del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("El apellido materno del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtcApellidoMat.Focus();
                 lTrue = false;
             }
             else if (string.IsNullOrEmpty(txtcNombres.Text))
             {
-                MessageBox.Show("El monto de apuesta del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("El monto de apuesta del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtcNombres.Focus();
                 lTrue = false;
             }
             else if (string.IsNullOrEmpty(txtcDocumento.Text))
             {
-                MessageBox.Show("El documento del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show("El documento del cliente no es válida", "Valida Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtcDocumento.Focus();
                 lTrue = false;
             }
@@ -192,7 +200,7 @@ namespace BetZelva
             _Contenido = _Contenido + "Fecha y Hora de encuentro: " +lblFechaHoraEncuentro.Text+ "\n";
             _Contenido = _Contenido + "Monto Apostado: S/  " + string.Format("{0:0.00}", txtnMontoApuesta.Text) + "\n\n";
             _Contenido = _Contenido + "**NOTA: La única manera de reclamar su gancia\n es presentando el presente voucher y Su DNI**";
-            MessageBox.Show(_Contenido, "Voucher");
+            MyMessageBox.Show(_Contenido, "Voucher");
         }
         #endregion
 
@@ -221,10 +229,11 @@ namespace BetZelva
         {
             HabilitaLimpiaControles(false, 1);
             txtcDocumento.tipdoc = "1";
+            HabilitarControlesDatosCliente(false);
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Dispose();
+            this.Close();
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -294,12 +303,58 @@ namespace BetZelva
                     if (Convert.ToInt32(dtRes.Rows[0][0]) == 0)
                     {
                         txtCodRecibo.Text = dtRes.Rows[0]["idRecibo"].ToString();
-                        Voucher(dtRes);
+                        //Voucher(dtRes);
+                        #region Imprime 
+                        int idConcepto = 1;
+                        int idTipoOperacion = 1;
+                        int idKardex = Convert.ToInt32(dtRes.Rows[0]["idKardex"]);
+                        int idApuesta = Convert.ToInt32(dtRes.Rows[0]["idApuesta"]);
+                        int idRecibo = Convert.ToInt32(dtRes.Rows[0]["idRecibo"]);
+
+                        MyMessageBox.Show("Operacion realizada correctamente", "Retiro de caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        // impresion del boucher 
+                        DataTable TB = new AdReportes().CobroApuesta(idApuesta, idKardex);
+                        if (TB.Rows.Count > 0)
+                        {
+                            List<ReportDataSource> dtslist = new List<ReportDataSource>();
+                            List<ReportParameter> paramlist = new List<ReportParameter>();
+
+                            dtslist.Clear();
+                            paramlist.Clear();
+
+                            dtslist.Add(new ReportDataSource("dtsImpresion", TB));
+
+                            paramlist.Add(new ReportParameter("idApuesta", idApuesta.ToString(), false));
+                            paramlist.Add(new ReportParameter("idKardex", idKardex.ToString(), false));
+                            paramlist.Add(new ReportParameter("idTipoOperacion", idTipoOperacion.ToString(), false));
+                            paramlist.Add(new ReportParameter("idConcepto", idConcepto.ToString(), false));
+
+                            string NombreReporte = "RptApuesta.rdlc";
+                            new FrmReportador(dtslist, NombreReporte, paramlist).ShowDialog();
+                        }
+                        #endregion
                         HabilitaLimpiaControles(true, 3);
                     }
                 }
 
             }
+            
         }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            HabilitaLimpiaControles(false, 1);
+            HabilitaLimpiaControles(true, 4);
+        }
+
+        private void HabilitarControlesDatosCliente(bool val)
+        {
+            txtcApellidoMat.Enabled = val;
+            txtcApellidoPat.Enabled = val;
+            txtcDocumento.Enabled = val;
+            txtcNombres.Enabled = val;
+        }
+
     }
 }

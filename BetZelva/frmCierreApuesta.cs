@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using AccesoDatos;
+using MessageBoxExample;
 
 
 namespace BetZelva
@@ -31,6 +32,11 @@ namespace BetZelva
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
             btnEditar.Enabled = false;
+
+            foreach (DataGridViewColumn column in dtgEncuentros.Columns)
+            {
+                column.DefaultCellStyle.ForeColor = Color.Black;
+            }
         }
 
         private void BuscaEncuentros()
@@ -95,7 +101,9 @@ namespace BetZelva
             foreach (DataGridViewColumn Column in dtgEncuentros.Columns)
             {
                 Column.Visible = false;
+                Column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
+
             dtgEncuentros.Columns["cTorneo"].Visible = true;
             dtgEncuentros.Columns["cEquipoLocal"].Visible = true;
             dtgEncuentros.Columns["cEquipoVisita"].Visible = true;
@@ -117,9 +125,9 @@ namespace BetZelva
             dtgEncuentros.Columns["nMultiplicadorVisita"].DisplayIndex = 4;
             dtgEncuentros.Columns["nMultiplicadorEmpate"].DisplayIndex = 5;
 
-            dtgEncuentros.Columns["cTorneo"].Width = 10;
-            dtgEncuentros.Columns["cEquipoLocal"].Width = 80;
-            dtgEncuentros.Columns["cEquipoVisita"].Width = 80;
+            dtgEncuentros.Columns["cTorneo"].Width = 150;
+            //dtgEncuentros.Columns["cEquipoLocal"].Width = 80;
+            //dtgEncuentros.Columns["cEquipoVisita"].Width = 80;
             //dtgEncuentros.Columns["nMultiplicadorLocal"].Width = 0;
             //dtgEncuentros.Columns["nMultiplicadorVisita"].Width = 0;
             //dtgEncuentros.Columns["nMultiplicadorEmpate"].Width = 0;
@@ -144,7 +152,7 @@ namespace BetZelva
             string Rpta = _Resultado.GuardardarResultados(idConfiguraciones, nAnotacionLocal, nAnotacionVisita,
                                                           idUsuario, dFechaReg);
 
-            MessageBox.Show(Rpta, "Registro de resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MyMessageBox.Show(Rpta, "Registro de resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             HabilitaControles(false);
             LimpiaControles();
@@ -157,11 +165,39 @@ namespace BetZelva
 
         private void HabilitaControles(bool val)
         {
-            grbBusqueda.Enabled = !val;
-            grbDetalle.Enabled = false;
-            grbGrid.Enabled = !val;
-            grbResultado.Enabled = val;
+            //grbBusqueda.Enabled = !val;
+            HabilitarControlesBusqueda(!val);
+            //grbDetalle.Enabled = false;
+            HabilitarControlesDetalle(false);
+            //grbGrid.Enabled = !val;
+            HabilitarControlesGrid(!val);
+            //grbResultado.Enabled = val;
+            HabilitarControlesResultado(val);
         }
+
+        private void HabilitarControlesBusqueda(bool val)
+        {
+            btnBuscar.Enabled = val;
+        }
+        private void HabilitarControlesDetalle(bool val)
+        {
+            txtCod.Enabled = val;
+            txtFecha.Enabled = val;
+            txtLocal.Enabled = val;
+            txtVisita.Enabled = val;
+        }
+        private void HabilitarControlesGrid(bool val)
+        {
+            dtgEncuentros.Enabled = val;
+        }
+        private void HabilitarControlesResultado(bool val)
+        {
+            txtGolesLocal.Enabled = val;
+            txtGolesVisita.Enabled = val;
+        }
+
+
+
         private void LimpiaControles()
         {
             txtGolesLocal.Text = "0";
@@ -220,6 +256,11 @@ namespace BetZelva
             btnEditar.Enabled = true;
             btnGuardar.Enabled = false;
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

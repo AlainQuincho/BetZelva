@@ -10,6 +10,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Drawing;
 using System.Security.Cryptography;
+using MessageBoxExample;
 
 
 namespace BetZelva
@@ -22,6 +23,7 @@ namespace BetZelva
         public frmAcceso()
         {
             InitializeComponent();
+            this.Icon = new Icon("Resources/BetZelva.Ico");
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -44,11 +46,11 @@ namespace BetZelva
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Acceso incorrecto, vuelva a intentarlo", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("Acceso incorrecto, vuelva a intentarlo", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Acceso incorrecto, vuelva a intentarlo", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("Acceso incorrecto, vuelva a intentarlo", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
@@ -62,13 +64,13 @@ namespace BetZelva
         {
             if(string.IsNullOrEmpty(txtUsuario.Text))
             {
-                MessageBox.Show("Debe ingresar el usuario", "Acceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("Debe ingresar el usuario", "Acceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtContraseña.Clear();
                 return true;
             }
             if(string.IsNullOrEmpty(txtContraseña.Text))
             {
-                MessageBox.Show("Debe ingresar la contraseña","Acceso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("Debe ingresar la contraseña","Acceso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 txtContraseña.Clear();
                 return true;
             }
@@ -89,7 +91,7 @@ namespace BetZelva
 
                     if (clsVarGlobal.User.lChangePass)
                     {
-                        MessageBox.Show("Cambie su contraseña por favor", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MyMessageBox.Show("Cambie su contraseña por favor", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadChangePass();
                     }
                 }
@@ -104,7 +106,7 @@ namespace BetZelva
 
             if (lAutenticado)
             {
-                //MessageBox.Show("Bienvenido!!!", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MyMessageBox.Show("Bienvenido!!!", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
 
                 new AdVarGlobal().AdCargaVariables(); // carga variables globales
@@ -212,12 +214,12 @@ namespace BetZelva
                     }
                     else
                     {
-                        MessageBox.Show("Usuario incorrecto", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MyMessageBox.Show("Usuario incorrecto", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Usuario incorrecto", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MyMessageBox.Show("Usuario incorrecto", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             return res;
@@ -398,16 +400,16 @@ namespace BetZelva
             {
                 if (res = new clsADUsuario().ChangePassword(cUsu, cPassOld, cPassNew))
                 {
-                    MessageBox.Show("Cambio de contraseña realizado exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyMessageBox.Show("Cambio de contraseña realizado exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Error al cambiar de contraseña", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MyMessageBox.Show("Error al cambiar de contraseña", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Las contraseñas nuevas no coinciden.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("Las contraseñas nuevas no coinciden.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return res;
         }

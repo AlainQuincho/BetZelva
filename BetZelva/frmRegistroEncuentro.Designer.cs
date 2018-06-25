@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBusca = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lblFechaHoraEncuentro = new System.Windows.Forms.Label();
             this.lblPagaEmpate = new System.Windows.Forms.Label();
@@ -63,14 +64,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnBusca = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.grbDatosCliente.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(13, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 16);
@@ -109,12 +111,31 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 357);
+            this.groupBox1.Size = new System.Drawing.Size(485, 343);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Encuentro";
+            // 
+            // btnBusca
+            // 
+            this.btnBusca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnBusca.FlatAppearance.BorderSize = 0;
+            this.btnBusca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnBusca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusca.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBusca.Image = global::BetZelva.Properties.Resources._16_Buscar;
+            this.btnBusca.Location = new System.Drawing.Point(279, 40);
+            this.btnBusca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBusca.Name = "btnBusca";
+            this.btnBusca.Size = new System.Drawing.Size(46, 24);
+            this.btnBusca.TabIndex = 20;
+            this.btnBusca.UseVisualStyleBackColor = false;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // label7
             // 
@@ -131,6 +152,7 @@
             // 
             this.lblFechaHoraEncuentro.AutoSize = true;
             this.lblFechaHoraEncuentro.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHoraEncuentro.ForeColor = System.Drawing.SystemColors.Control;
             this.lblFechaHoraEncuentro.Location = new System.Drawing.Point(393, 45);
             this.lblFechaHoraEncuentro.Name = "lblFechaHoraEncuentro";
             this.lblFechaHoraEncuentro.Size = new System.Drawing.Size(55, 21);
@@ -172,6 +194,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.txtnMontoGanar);
             this.groupBox4.Controls.Add(this.txtnAnotacionVisita);
             this.groupBox4.Controls.Add(this.txtnAnotacionLocal);
@@ -179,9 +203,9 @@
             this.groupBox4.Controls.Add(this.lblResultado);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Location = new System.Drawing.Point(0, 179);
+            this.groupBox4.Location = new System.Drawing.Point(6, 179);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(482, 115);
+            this.groupBox4.Size = new System.Drawing.Size(471, 115);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             // 
@@ -271,6 +295,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
             this.label10.Location = new System.Drawing.Point(3, 85);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 16);
@@ -281,6 +306,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
             this.label13.Location = new System.Drawing.Point(232, 85);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(124, 16);
@@ -317,6 +343,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(306, 110);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 20);
@@ -338,6 +365,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(56, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 20);
@@ -349,6 +377,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(14, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 16);
@@ -366,17 +395,18 @@
             this.grbDatosCliente.Controls.Add(this.label2);
             this.grbDatosCliente.Controls.Add(this.label1);
             this.grbDatosCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbDatosCliente.Enabled = false;
             this.grbDatosCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDatosCliente.Location = new System.Drawing.Point(497, 3);
+            this.grbDatosCliente.ForeColor = System.Drawing.SystemColors.Control;
+            this.grbDatosCliente.Location = new System.Drawing.Point(494, 3);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(488, 357);
+            this.grbDatosCliente.Size = new System.Drawing.Size(485, 343);
             this.grbDatosCliente.TabIndex = 5;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos del Cliente";
             // 
             // txtcDocumento
             // 
+            this.txtcDocumento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcDocumento.Location = new System.Drawing.Point(165, 125);
             this.txtcDocumento.Name = "txtcDocumento";
             this.txtcDocumento.Size = new System.Drawing.Size(162, 23);
@@ -385,6 +415,7 @@
             // txtcNombres
             // 
             this.txtcNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtcNombres.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcNombres.Location = new System.Drawing.Point(165, 96);
             this.txtcNombres.Name = "txtcNombres";
             this.txtcNombres.Size = new System.Drawing.Size(282, 23);
@@ -393,6 +424,7 @@
             // txtcApellidoMat
             // 
             this.txtcApellidoMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtcApellidoMat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcApellidoMat.Location = new System.Drawing.Point(165, 67);
             this.txtcApellidoMat.Name = "txtcApellidoMat";
             this.txtcApellidoMat.Size = new System.Drawing.Size(282, 23);
@@ -401,6 +433,7 @@
             // txtcApellidoPat
             // 
             this.txtcApellidoPat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtcApellidoPat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcApellidoPat.Location = new System.Drawing.Point(165, 38);
             this.txtcApellidoPat.Name = "txtcApellidoPat";
             this.txtcApellidoPat.Size = new System.Drawing.Size(282, 23);
@@ -410,6 +443,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(15, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 16);
@@ -420,6 +454,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(15, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 16);
@@ -430,6 +465,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(15, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 16);
@@ -469,24 +505,40 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1050, 500);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1044, 526);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(28, 28);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(994, 444);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(988, 470);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(982, 39);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "REGISTRO DE ENCUENTROS";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
             // 
@@ -496,11 +548,11 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 397);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 422);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(988, 44);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(982, 45);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -512,23 +564,8 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(101, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(784, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(779, 38);
             this.flowLayoutPanel1.TabIndex = 16;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.grbDatosCliente, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(988, 363);
-            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // btnSalir
             // 
@@ -541,7 +578,7 @@
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSalir.Image = global::BetZelva.Properties.Resources._24_Volver;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(667, 2);
+            this.btnSalir.Location = new System.Drawing.Point(662, 2);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(115, 32);
@@ -553,6 +590,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -561,7 +599,7 @@
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.Image = global::BetZelva.Properties.Resources._24_Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(533, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(528, 2);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 32);
@@ -573,6 +611,7 @@
             // btnGrabar
             // 
             this.btnGrabar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnGrabar.Enabled = false;
             this.btnGrabar.FlatAppearance.BorderSize = 0;
             this.btnGrabar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnGrabar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -581,7 +620,7 @@
             this.btnGrabar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnGrabar.Image = global::BetZelva.Properties.Resources._24_Grabar;
             this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrabar.Location = new System.Drawing.Point(398, 2);
+            this.btnGrabar.Location = new System.Drawing.Point(393, 2);
             this.btnGrabar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(131, 32);
@@ -593,6 +632,7 @@
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnNuevo.Enabled = false;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -601,7 +641,7 @@
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNuevo.Image = global::BetZelva.Properties.Resources._24_Nuevo;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(278, 2);
+            this.btnNuevo.Location = new System.Drawing.Point(273, 2);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(116, 32);
@@ -610,30 +650,27 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
-            // btnBusca
+            // tableLayoutPanel4
             // 
-            this.btnBusca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnBusca.FlatAppearance.BorderSize = 0;
-            this.btnBusca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnBusca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusca.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBusca.Image = global::BetZelva.Properties.Resources._16_Buscar;
-            this.btnBusca.Location = new System.Drawing.Point(279, 40);
-            this.btnBusca.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBusca.Name = "btnBusca";
-            this.btnBusca.Size = new System.Drawing.Size(46, 24);
-            this.btnBusca.TabIndex = 20;
-            this.btnBusca.UseVisualStyleBackColor = false;
-            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.grbDatosCliente, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 42);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(982, 349);
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // frmRegistroEncuentro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1050, 500);
+            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.ClientSize = new System.Drawing.Size(1044, 526);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtCodRecibo);
@@ -649,6 +686,7 @@
             this.grbDatosCliente.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -700,5 +738,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btnBusca;
+        private System.Windows.Forms.Label label12;
     }
 }

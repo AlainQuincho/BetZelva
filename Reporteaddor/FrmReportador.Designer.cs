@@ -1,6 +1,6 @@
-﻿namespace BetZelva
+﻿namespace Reporteaddor
 {
-    partial class frmControlPresentacion
+    partial class FrmReportador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // frmControlPresentacion
+            // ReportViewer
+            // 
+            this.ReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.ReportViewer.Name = "ReportViewer";
+            this.ReportViewer.ShowRefreshButton = false;
+            this.ReportViewer.Size = new System.Drawing.Size(781, 305);
+            this.ReportViewer.TabIndex = 3;
+            // 
+            // FrmReportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 483);
-            this.Name = "frmControlPresentacion";
-            this.Text = "frmControlPresentacion";
+            this.ClientSize = new System.Drawing.Size(781, 305);
+            this.Controls.Add(this.ReportViewer);
+            this.Name = "FrmReportador";
+            this.Load += new System.EventHandler(this.FrmReportador_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        public Microsoft.Reporting.WinForms.ReportViewer ReportViewer;
     }
 }

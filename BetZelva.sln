@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlesBase", "ControlesB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotonesBase", "BotonesBase\BotonesBase.csproj", "{683BEBE0-78F8-459A-B1FB-55DAD768AF03}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reporteaddor", "Reporteaddor", "{2F7C0D15-7CF4-40A0-98BE-9E91841880CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporteador", "Reporteaddor\Reporteador.csproj", "{42C5E5B7-4FE2-40E8-B389-150014630EAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{683BEBE0-78F8-459A-B1FB-55DAD768AF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{683BEBE0-78F8-459A-B1FB-55DAD768AF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{683BEBE0-78F8-459A-B1FB-55DAD768AF03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C5E5B7-4FE2-40E8-B389-150014630EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C5E5B7-4FE2-40E8-B389-150014630EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C5E5B7-4FE2-40E8-B389-150014630EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C5E5B7-4FE2-40E8-B389-150014630EAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +70,6 @@ Global
 		{B282D745-D4C0-4371-AF9E-DDA9D3BE5183} = {92B7FA62-21BE-4E81-AE2F-25A4C0F4F51C}
 		{A40CCE15-9FC3-4CBD-9E23-370236924DF9} = {3829C884-1A95-44E0-9461-34FD54FED747}
 		{683BEBE0-78F8-459A-B1FB-55DAD768AF03} = {3829C884-1A95-44E0-9461-34FD54FED747}
+		{42C5E5B7-4FE2-40E8-B389-150014630EAB} = {2F7C0D15-7CF4-40A0-98BE-9E91841880CA}
 	EndGlobalSection
 EndGlobal

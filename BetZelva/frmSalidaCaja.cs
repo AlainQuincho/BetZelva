@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using AccesoDatos;
+using MessageBoxExample;
+using Microsoft.Reporting.WinForms;
+using Reporteaddor;
+using System.Collections.Generic;
 
 namespace BetZelva
 {
@@ -51,7 +55,7 @@ namespace BetZelva
                 }
                 if(!Result.cMensaje.Equals("OK"))
                 {
-                    MessageBox.Show(Result.cMensaje, "Retiro de caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyMessageBox.Show(Result.cMensaje, "Retiro de caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnGrabar.Enabled = false;
                     btnCancelar.Enabled = true;
                     return;
@@ -81,9 +85,17 @@ namespace BetZelva
 
         private void HabilitaControles(bool val)
         {
-            grbDatosCliente.Enabled = false;
-            grbDatosApuesta.Enabled = false;
-            grbBusqueda.Enabled = val;
+            //grbDatosCliente.Enabled = false;
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtDNI.Enabled = false;
+            txtFechaReg.Enabled = false;
+            txtFechaCierre.Enabled = false;
+            
+            //grbDatosApuesta.Enabled = false;
+            //grbBusqueda.Enabled = val;
+            txtCodRecibo.Enabled = val;
+            btnBuscar.Enabled = val;
 
             txtMontoRetiro.Enabled = false;
         }
@@ -105,11 +117,43 @@ namespace BetZelva
 
             txtMontoRetiro.Text = "0.00";
         }
-
+        private string ValidarInicioOpeCaj()
+        {
+            string cEstCie = new clsInicioCuadreOperaciones().ValIniOpeCaja(DateTime.Today, clsVarGlobal.User.idUsuario).Rows[0][0].ToString();
+            return cEstCie;
+        }
         private void frmSalidaCaja_Load(object sender, EventArgs e)
         {
+            string cRpta = ValidarInicioOpeCaj();
+            bool Rpta = false;
+            switch (cRpta) // Si Estado es: F--> Falta Iniciar, A--> Caja Abierta, C--> Caja Cerrada  
+            {
+                case "F":
+                    MyMessageBox.Show("El Usuario NO inició operaciones", "Validar Inicio de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Rpta = true;
+                    return;
+                case "A":
+                    //   MyMessageBox.Show("El Usuario ya Inicio sus Operaciones", "Validar Inicio de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // this.Dispose();
+                    //   return;
+                    break;
+                case "C":
+                    MyMessageBox.Show("El Usuario ya Cerro sus Operaciones", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Rpta = true;
+                    return;
+                default:
+                    MyMessageBox.Show(cRpta, "Error al Validar Estado de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Rpta = true;
+                    return;
+            }
+            if (Rpta)
+            {
+                this.Close();
+            }
+
             LimpiaControles();
             HabilitaControles(true);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -127,9 +171,35 @@ namespace BetZelva
             int idConcepto = 2;
             int idRecibo = 0;
             int idKardex = 0;
+            int idTipoOperacion = 2;
 
             string Msj = _Retiro.GuardaRetiroCaja(idApuesta, dFechaReg, nMontoOperacion, idUsuarioReg, idConcepto, ref idRecibo, ref idKardex);
-            MessageBox.Show(Msj, "Retiro de caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            #region Imprime 
+            MyMessageBox.Show(Msj, "Retiro de caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //MyMessageBox.Show("Operacion realizada correctamente", "Retiro de caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            DataTable TB = new AdReportes().CobroApuesta(idApuesta, idKardex);
+            if (TB.Rows.Count > 0)
+            {
+                List<ReportDataSource> dtslist = new List<ReportDataSource>();
+                List<ReportParameter> paramlist = new List<ReportParameter>();
+
+                dtslist.Clear();
+                paramlist.Clear();
+
+                dtslist.Add(new ReportDataSource("dtsImpresion", TB));
+
+                paramlist.Add(new ReportParameter("idApuesta", idApuesta.ToString(), false));
+                paramlist.Add(new ReportParameter("idKardex", idKardex.ToString(), false));
+                paramlist.Add(new ReportParameter("idTipoOperacion", idTipoOperacion.ToString(), false));
+                paramlist.Add(new ReportParameter("idConcepto", idConcepto.ToString(), false));
+
+                string NombreReporte = "RptPagoGanador.rdlc";
+                new FrmReportador(dtslist, NombreReporte, paramlist).ShowDialog();
+            }
+            #endregion
 
             HabilitaControles(false);
             btnGrabar.Enabled = false;
@@ -139,6 +209,11 @@ namespace BetZelva
         private void grbBusqueda_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

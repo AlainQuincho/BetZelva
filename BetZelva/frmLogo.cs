@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BetZelva
 {
-    public partial class frmControlPresentacion : Form
+    public partial class frmLogo : Form
     {
-        public frmControlPresentacion()
+        public frmLogo()
         {
             InitializeComponent();
         }

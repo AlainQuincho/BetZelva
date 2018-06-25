@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using AccesoDatos;
+using MessageBoxExample;
 
 namespace BetZelva
 {
@@ -45,21 +46,23 @@ namespace BetZelva
             switch (cRpta) // Si Estado es: F--> Falta Iniciar, A--> Caja Abierta, C--> Caja Cerrada  
             {
                 case "F":
-                    MessageBox.Show("El Usuario NO inició operaciones", "Validar Inicio de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Dispose();
+                    MyMessageBox.Show("El Usuario NO inició operaciones", "Validar Inicio de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tabControl1.Enabled = false;
                     return;
                 case "A":
-                    //   MessageBox.Show("El Usuario ya Inicio sus Operaciones", "Validar Inicio de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //   MyMessageBox.Show("El Usuario ya Inicio sus Operaciones", "Validar Inicio de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // this.Dispose();
                     //   return;
                     break;
                 case "C":
-                    MessageBox.Show("El Usuario ya Cerro sus Operaciones", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Dispose();
+                    MyMessageBox.Show("El Usuario ya Cerro sus Operaciones", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //this.Dispose();
+                    tabControl1.Enabled = false;
                     return;
                 default:
-                    MessageBox.Show(cRpta, "Error al Validar Estado de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Dispose();
+                    MyMessageBox.Show(cRpta, "Error al Validar Estado de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //this.Dispose();
+                    tabControl1.Enabled = false;
                     return;
             }
 
@@ -111,7 +114,7 @@ namespace BetZelva
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Close();
         }
         public frmCuadreCierreOpe()
         {
@@ -151,7 +154,7 @@ namespace BetZelva
             {
                 if (cCorFra != "0" && lCuadreCaja ==false)
                 {
-                    MessageBox.Show("Ya Realizó su Corte Fraccionario", "Validar Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyMessageBox.Show("Ya Realizó su Corte Fraccionario", "Validar Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dtgMoneda.Enabled = false;
                     dtgBillete.Enabled = false;
                     dtgBilletesDolares.Enabled = false;
@@ -163,13 +166,13 @@ namespace BetZelva
                 }
                 if (cCorFra == "0"&&lCuadreCaja == true)
                 {
-                    MessageBox.Show("Primero debe Realizar su Corte Fraccionario... por Favor..", "Validar Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyMessageBox.Show("Primero debe Realizar su Corte Fraccionario... por Favor..", "Validar Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cRpta = "ERROR";
                 }
             }
             else
             {
-                MessageBox.Show(msge, "Error al Validar Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(msge, "Error al Validar Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cRpta = "ERROR";
             }
             return cRpta;
@@ -190,7 +193,7 @@ namespace BetZelva
                 }
                 else
                 {
-                    MessageBox.Show(msge, "Error al Extraer Datos de Monedas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.Show(msge, "Error al Extraer Datos de Monedas", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -205,7 +208,7 @@ namespace BetZelva
                 }
                 else
                 {
-                    MessageBox.Show(msge, "Error al Extraer Datos de Monedas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.Show(msge, "Error al Extraer Datos de Monedas", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -225,7 +228,7 @@ namespace BetZelva
                 }
                 else
                 {
-                    MessageBox.Show(msge, "Error al Extraer Datos de Billetes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.Show(msge, "Error al Extraer Datos de Billetes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -240,7 +243,7 @@ namespace BetZelva
                 }
                 else
                 {
-                    MessageBox.Show(msge, "Error al Extraer Datos de Billetes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.Show(msge, "Error al Extraer Datos de Billetes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -260,7 +263,7 @@ namespace BetZelva
                 }
                 else
                 {
-                    MessageBox.Show(msge, "Error al Extraer Billetes en Dólares", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.Show(msge, "Error al Extraer Billetes en Dólares", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -276,7 +279,7 @@ namespace BetZelva
                 }
                 else
                 {
-                    MessageBox.Show(msge, "Error al Extraer Billetes en Dólares", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.Show(msge, "Error al Extraer Billetes en Dólares", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -323,7 +326,11 @@ namespace BetZelva
         }
         private void FormatoGrid()
         {
-    
+            foreach (DataGridViewColumn column in dtgMoneda.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            
             this.dtgMoneda.Columns["idMoneda"].Visible = false;
             this.dtgMoneda.Columns["idTipBillMon"].Visible = false;
             this.dtgMoneda.Columns["nValor"].Visible = false;
@@ -333,6 +340,11 @@ namespace BetZelva
             this.dtgMoneda.Columns["nCantidad"].HeaderText = "Cantidad";
             this.dtgMoneda.Columns["nTotal"].Width = 95;
             this.dtgMoneda.Columns["nTotal"].HeaderText = "Total";
+
+            foreach (DataGridViewColumn column in dtgBillete.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
 
             //--Formato Grid Billetes Soles
             this.dtgBillete.Columns["idMoneda"].Visible = false;
@@ -344,6 +356,11 @@ namespace BetZelva
             this.dtgBillete.Columns["nCantidad"].HeaderText = "Cantidad";
             this.dtgBillete.Columns["nTotal"].Width = 95;
             this.dtgBillete.Columns["nTotal"].HeaderText = "Total";
+
+            foreach (DataGridViewColumn column in dtgBilletesDolares.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
 
             ////--Formato Grid Billetes Dolares
             this.tabBilletaje.SelectedIndex = 1;
@@ -372,6 +389,10 @@ namespace BetZelva
         }
         private void FormatoGridDolares()
         {
+            foreach (DataGridViewColumn column in dtgBilletesDolares.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
             //--Formato Grid Billetes Dolares
             this.dtgBilletesDolares.Columns["idMoneda"].Visible = false;
             this.dtgBilletesDolares.Columns["idTipBillMon"].Visible = false;
@@ -414,25 +435,25 @@ namespace BetZelva
             //===================================================================          
             if (Convert.ToDouble(this.txtSaldoSoles.Text) < 0)
             {
-                MessageBox.Show("El Saldo Final en SOLES NO Puede ser NEGATIVO: VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("El Saldo Final en SOLES NO Puede ser NEGATIVO: VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (Convert.ToDouble(this.txtSaldoOpeDolares.Text) < 0)
             {
-                MessageBox.Show("El Saldo Final en DÓLARES, NO Puede ser NEGATIVO: VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("El Saldo Final en DÓLARES, NO Puede ser NEGATIVO: VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (Convert.ToDouble(this.txtDiferencia.Text) != 0)
             {
-                MessageBox.Show("Existe Diferencia en SOLES entre el CORTE FRACCIONARIO y CUADRE CAJA.. VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("Existe Diferencia en SOLES entre el CORTE FRACCIONARIO y CUADRE CAJA.. VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (Convert.ToDouble(this.txtDiferenciaDolares.Text) != 0)
             {
-                MessageBox.Show("Existe Diferencia en DOLARES entre el CORTE FRACCIONARIO y CUADRE CAJA.. VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MyMessageBox.Show("Existe Diferencia en DOLARES entre el CORTE FRACCIONARIO y CUADRE CAJA.. VERIFICAR...", "Validar Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -485,7 +506,7 @@ namespace BetZelva
             string cRpta = new clsInicioCuadreOperaciones().RegCierreOperaciones(DateTime.Today, idUsuario,  nSalIniSol, nSalIniDol, nSalFinSol, nSalFinDol, xmlIngSol, xmlEgrSol, xmlIngDol, xmlEgrDol);
             if (cRpta == "OK")
             {
-                MessageBox.Show("El Cierre de Operaciones se Realizó Correctamente...", "Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MyMessageBox.Show("El Cierre de Operaciones se Realizó Correctamente...", "Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //==================================================
                 //--Actualizar Cierre
                 //==================================================
@@ -493,7 +514,7 @@ namespace BetZelva
             }
             else
             {
-                MessageBox.Show(cRpta, "Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(cRpta, "Cierre de Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.btnGrabarCuadre.Enabled = false;
@@ -520,21 +541,21 @@ namespace BetZelva
             bool lTrue = true;
             if (CuadreOpe() != "OK")
             {
-                MessageBox.Show(CuadreOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(CuadreOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lTrue =false;
             }
             FormatoGridSol();
 
             if (SalIniOpe() != "OK")
             {
-                MessageBox.Show(SalIniOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(SalIniOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lTrue =false;
             }
             SaldoFinal();
             //--Saldo de Corte Fraccionario
             if (SaldoCorteFraccionario() != "OK")
             {
-                MessageBox.Show(SaldoCorteFraccionario(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(SaldoCorteFraccionario(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lTrue =false;
             }
             if (lTrue)
@@ -597,7 +618,7 @@ namespace BetZelva
             else
             {
                 //return false;
-                //MessageBox.Show(msge, "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MyMessageBox.Show(msge, "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return msge;
             }
 
@@ -637,7 +658,7 @@ namespace BetZelva
             else
             {
                 return msge;
-                // MessageBox.Show(msge, "Error al Extraer El Saldo Inicial...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // MyMessageBox.Show(msge, "Error al Extraer El Saldo Inicial...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return "OK";
         }
@@ -651,38 +672,55 @@ namespace BetZelva
         }
         private void FormatoGridSol()
         {
+            foreach (DataGridViewColumn column in dtgIngresosSoles.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
             //--Formato Grid Ingreso Soles
             this.dtgIngresosSoles.Columns["idConcepto"].Visible = false;
             this.dtgIngresosSoles.Columns["nTotal"].Visible = false;
-            this.dtgIngresosSoles.Columns["cConcepto"].Width = 250;
+            //this.dtgIngresosSoles.Columns["cConcepto"].Width = 250;
             this.dtgIngresosSoles.Columns["cConcepto"].HeaderText = "Concepto";
             this.dtgIngresosSoles.Columns["nMontoOperacion"].Width = 120;
             this.dtgIngresosSoles.Columns["nMontoOperacion"].HeaderText = "Total Operación";
 
+            foreach (DataGridViewColumn column in dtgEgresosSoles.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
             //--Formato Grid Egreso Soles
             this.dtgEgresosSoles.Columns["idConcepto"].Visible = false;
             this.dtgEgresosSoles.Columns["nTotal"].Visible = false;
-            this.dtgEgresosSoles.Columns["cConcepto"].Width = 250;
+            //this.dtgEgresosSoles.Columns["cConcepto"].Width = 250;
             this.dtgEgresosSoles.Columns["cConcepto"].HeaderText = "Concepto";
-            this.dtgEgresosSoles.Columns["nMontoOperacion"].Width = 120;
+            //this.dtgEgresosSoles.Columns["nMontoOperacion"].Width = 120;
             this.dtgEgresosSoles.Columns["nMontoOperacion"].HeaderText = "Total Operación";
         }
         private void FormatoGridDol()
         {
+            foreach (DataGridViewColumn column in dtgIngresosDolares.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+
             //--Formato Grid Ingreso Dólares
             this.dtgIngresosDolares.Columns["idConcepto"].Visible = false;
             this.dtgIngresosDolares.Columns["nTotal"].Visible = false;
-            this.dtgIngresosDolares.Columns["cConcepto"].Width = 250;
+            //this.dtgIngresosDolares.Columns["cConcepto"].Width = 250;
             this.dtgIngresosDolares.Columns["cConcepto"].HeaderText = "Concepto";
-            this.dtgIngresosDolares.Columns["nMontoOperacion"].Width = 120;
+            //this.dtgIngresosDolares.Columns["nMontoOperacion"].Width = 120;
             this.dtgIngresosDolares.Columns["nMontoOperacion"].HeaderText = "Total Operación";
 
+            foreach (DataGridViewColumn column in dtgEgresosDolares.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
             //--Formato Grid Egreso Dólares
             this.dtgEgresosDolares.Columns["idConcepto"].Visible = false;
             this.dtgEgresosDolares.Columns["nTotal"].Visible = false;
-            this.dtgEgresosDolares.Columns["cConcepto"].Width = 250;
+            //this.dtgEgresosDolares.Columns["cConcepto"].Width = 250;
             this.dtgEgresosDolares.Columns["cConcepto"].HeaderText = "Concepto";
-            this.dtgEgresosDolares.Columns["nMontoOperacion"].Width = 120;
+            //this.dtgEgresosDolares.Columns["nMontoOperacion"].Width = 120;
             this.dtgEgresosDolares.Columns["nMontoOperacion"].HeaderText = "Total Operación";
         }
         private string SaldoCorteFraccionario()
@@ -746,7 +784,7 @@ namespace BetZelva
             else
             {
                 return cRpta;
-                //MessageBox.Show(cRpta, "Error al Extraer El Saldo Inicial...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MyMessageBox.Show(cRpta, "Error al Extraer El Saldo Inicial...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return "OK";
         }
@@ -764,7 +802,7 @@ namespace BetZelva
                         cRpta = cRpta + tbvalcierre.Rows[i]["cNombre"].ToString() + " ;";
                     }
                     cRpta = "FALTA QUE CIERREN CAJA: " + cRpta;
-                    MessageBox.Show(cRpta, "Validar Cierre de Caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyMessageBox.Show(cRpta, "Validar Cierre de Caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -778,21 +816,21 @@ namespace BetZelva
 
             if (CuadreOpe() != "OK")
             {
-                MessageBox.Show(CuadreOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(CuadreOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             FormatoGridSol();
 
             if (SalIniOpe() != "OK")
             {
-                MessageBox.Show(SalIniOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(SalIniOpe(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             SaldoFinal();
             //--Saldo de Corte Fraccionario
             if (SaldoCorteFraccionario() != "OK")
             {
-                MessageBox.Show(SaldoCorteFraccionario(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(SaldoCorteFraccionario(), "Error al Extraer Datos de las Operaciones", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -802,7 +840,7 @@ namespace BetZelva
         #region EVENTOS CORTE FRACCIONARIO
         private void btnGrabarBilletaje_Click(object sender, EventArgs e)
         {
-            var Msg = MessageBox.Show("Esta Seguro de Registrar su Corte Fraccionario?...", "Registrar Corte Fraccionario", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var Msg = MyMessageBox.Show("Esta Seguro de Registrar su Corte Fraccionario?...", "Registrar Corte Fraccionario", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Msg == DialogResult.No)
             {
                 return;
@@ -840,11 +878,11 @@ namespace BetZelva
             string cRpta = new clsInicioCuadreOperaciones().registroCorFrac(idUsuario, DateTime.Today,  xmlMonSol, xmlBillSol, xmlBillDol);
             if (cRpta == "OK")
             {
-                MessageBox.Show("El Corte Fraccionario se Registro Correctamente...", "Registro de Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MyMessageBox.Show("El Corte Fraccionario se Registro Correctamente...", "Registro de Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show(cRpta, "Error en Registro de Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.Show(cRpta, "Error en Registro de Corte Fraccionario", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             this.btnGrabarBilletaje.Enabled = false;
             this.dtgMoneda.Enabled = false;

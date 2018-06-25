@@ -101,6 +101,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabBilletaje.SuspendLayout();
@@ -128,7 +129,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(5, 72);
+            this.tabControl1.Location = new System.Drawing.Point(216, 133);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(580, 385);
@@ -150,32 +151,58 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(325, 330);
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEditar.Image = global::BetZelva.Properties.Resources._24_Editar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(221, 324);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(103, 32);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "&Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGrabarBilletaje
             // 
-            this.btnGrabarBilletaje.Location = new System.Drawing.Point(406, 330);
+            this.btnGrabarBilletaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnGrabarBilletaje.FlatAppearance.BorderSize = 0;
+            this.btnGrabarBilletaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnGrabarBilletaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGrabarBilletaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrabarBilletaje.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnGrabarBilletaje.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGrabarBilletaje.Image = global::BetZelva.Properties.Resources._24_Grabar;
+            this.btnGrabarBilletaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrabarBilletaje.Location = new System.Drawing.Point(330, 324);
             this.btnGrabarBilletaje.Name = "btnGrabarBilletaje";
-            this.btnGrabarBilletaje.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabarBilletaje.Size = new System.Drawing.Size(120, 32);
             this.btnGrabarBilletaje.TabIndex = 2;
             this.btnGrabarBilletaje.Text = "&Grabar";
-            this.btnGrabarBilletaje.UseVisualStyleBackColor = true;
+            this.btnGrabarBilletaje.UseVisualStyleBackColor = false;
             this.btnGrabarBilletaje.Click += new System.EventHandler(this.btnGrabarBilletaje_Click);
             // 
             // btnContinuar
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(487, 330);
+            this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnContinuar.FlatAppearance.BorderSize = 0;
+            this.btnContinuar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnContinuar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinuar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnContinuar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnContinuar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContinuar.Location = new System.Drawing.Point(456, 324);
             this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(75, 23);
+            this.btnContinuar.Size = new System.Drawing.Size(106, 32);
             this.btnContinuar.TabIndex = 1;
             this.btnContinuar.Text = "Continuar >>";
-            this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.UseVisualStyleBackColor = false;
             this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // tabBilletaje
@@ -426,22 +453,38 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(410, 333);
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAtras.Location = new System.Drawing.Point(352, 327);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.Size = new System.Drawing.Size(88, 32);
             this.btnAtras.TabIndex = 2;
             this.btnAtras.Text = "<< Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnGrabarCuadre
             // 
-            this.btnGrabarCuadre.Location = new System.Drawing.Point(487, 333);
+            this.btnGrabarCuadre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnGrabarCuadre.FlatAppearance.BorderSize = 0;
+            this.btnGrabarCuadre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnGrabarCuadre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGrabarCuadre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrabarCuadre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnGrabarCuadre.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGrabarCuadre.Image = global::BetZelva.Properties.Resources._24_Grabar;
+            this.btnGrabarCuadre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrabarCuadre.Location = new System.Drawing.Point(446, 327);
             this.btnGrabarCuadre.Name = "btnGrabarCuadre";
-            this.btnGrabarCuadre.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabarCuadre.Size = new System.Drawing.Size(112, 32);
             this.btnGrabarCuadre.TabIndex = 1;
             this.btnGrabarCuadre.Text = "Grabar";
-            this.btnGrabarCuadre.UseVisualStyleBackColor = true;
+            this.btnGrabarCuadre.UseVisualStyleBackColor = false;
             this.btnGrabarCuadre.Click += new System.EventHandler(this.btnGrabarCuadre_Click);
             // 
             // tabCuadre
@@ -1015,9 +1058,9 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Teal;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(7, 73);
+            this.lblTitulo.Location = new System.Drawing.Point(217, 133);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(575, 21);
+            this.lblTitulo.Size = new System.Drawing.Size(575, 19);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "REGISTRO DE BILLETAJE";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1028,67 +1071,97 @@
             this.groupBox1.Controls.Add(this.dtpFechaCuadre);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(52, 6);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(294, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(439, 63);
+            this.groupBox1.Size = new System.Drawing.Size(439, 72);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(91, 38);
+            this.txtUsuario.Location = new System.Drawing.Point(123, 44);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ReadOnly = true;
-            this.txtUsuario.Size = new System.Drawing.Size(342, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(310, 23);
             this.txtUsuario.TabIndex = 3;
             // 
             // dtpFechaCuadre
             // 
             this.dtpFechaCuadre.Enabled = false;
             this.dtpFechaCuadre.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaCuadre.Location = new System.Drawing.Point(91, 16);
+            this.dtpFechaCuadre.Location = new System.Drawing.Point(123, 15);
             this.dtpFechaCuadre.Name = "dtpFechaCuadre";
-            this.dtpFechaCuadre.Size = new System.Drawing.Size(98, 20);
+            this.dtpFechaCuadre.Size = new System.Drawing.Size(98, 23);
             this.dtpFechaCuadre.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(8, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.Size = new System.Drawing.Size(60, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Usuario:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(8, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.Size = new System.Drawing.Size(104, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "Fecha Cuadre:";
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(506, 459);
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.Image = global::BetZelva.Properties.Resources._24_Volver;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(863, 482);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(102, 32);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "&Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label20.Location = new System.Drawing.Point(356, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(324, 28);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "CUADRE Y CIERRE DE CAJA";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCuadreCierreOpe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 487);
+            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.ClientSize = new System.Drawing.Size(1044, 526);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCuadreCierreOpe";
             this.Text = "Cuadre y Cierre de Operaciones";
             this.Load += new System.EventHandler(this.frmCuadreCierreOpe_Load);
@@ -1123,6 +1196,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1200,5 +1274,6 @@
         private GEN.ControlesBase.txtNumRea txtDiferenciaDolares;
         private GEN.ControlesBase.txtNumRea txtSaldoCortDolares;
         private GEN.ControlesBase.txtNumRea txtSaldoOpeDolares;
+        private System.Windows.Forms.Label label20;
     }
 }

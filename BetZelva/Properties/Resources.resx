@@ -229,4 +229,58 @@
   <data name="_24_Volver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24_Volver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ShowAdvertencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShowAdvertencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShowError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowInformacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShowInformacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowMensaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShowMensaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowPregunta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShowPregunta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Monedas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Monedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Quitar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Quitar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_64_Tiempo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\64_Tiempo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BetZelva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BetZelva.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Cantado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Cantado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_DarDinero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_DarDinero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_DarDinero1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_DarDinero1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Naipes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Naipes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Engranaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Engranaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
